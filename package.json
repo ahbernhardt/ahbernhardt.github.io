@@ -3,6 +3,7 @@
   "homepage": "https://github.com/ahbernhardt/ahbernhardt.github.io",
   "version": "0.1.0",
   "private": true,
+  "wst": "/dist/",
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
