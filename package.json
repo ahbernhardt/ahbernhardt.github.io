@@ -1,53 +1,36 @@
 {
   "name": "ahbernhardt.github.io",
-  "homepage": "https://github.com/ahbernhardt/ahbernhardt.github.io",
   "version": "0.1.0",
   "private": true,
-  "wst": "/dist/",
+  "main": "index.js",
+  "homepage": "https://ahbernhardt.github.io/",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahbernhardt.github.io/issues"
+  },
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahbernhardt/ahbernhardt.github.io.git"
   },
   "dependencies": {
-    "@vueuse/head": "^0.9.8",
-    "core-js": "^3.8.3",
-    "execa": "^6.1.0",
-    "vue": "^3.2.13",
-    "vue-gh-pages": "^1.5.0",
-    "vue-meta": "^3.0.0-alpha.10"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "autoprefixer": "^10.4.12",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.1"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+    "autoprefixer": "10.4.14",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.9",
+    "next": "13.4.9",
+    "postcss": "8.4.25",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2"
+  }
 }
