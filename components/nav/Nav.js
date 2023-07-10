@@ -25,7 +25,7 @@ const Nav = ({ navItems,  active, setActive }) => {
             >
                 <a
                     className="top-0 left-0 w-[3rem] py-4 transition-all duration-300 hover:scale-90"
-                    href="https://www.ahbernhardt.github.io"
+                    href="https://ahbernhardt.github.io/"
                     target={"_blank"}
                     rel={"noreferrer"}
                 >
