@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import Image from "next/legacy/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import MobileNav from "./MobileNav";
+import MobileNav from "./mobileNav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
