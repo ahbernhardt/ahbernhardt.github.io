@@ -1,11 +1,7 @@
 import React from 'react'
 import SEO from "components/seo/seo"
 import Image from "next/legacy/image"
-import {Inter} from 'next/font/google'
 import Nav from "/components/nav/nav";
-
-const inter = Inter({subsets: ['latin']})
-
 
 export default function Home() {
     const site = {
