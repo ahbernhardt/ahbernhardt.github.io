@@ -20,13 +20,8 @@ module.exports = {
     fontFamily: {},
     extend: {
       colors: {
-        // Primary colors
-        abOrange: "rgb(121, 188, 67)",
-        abMidnight: "rgb(12, 35, 63)",
-        abLake: "rgb(38, 96, 146)",
-        // Secondary colors
+        mono14: "#202527",
         abFrost: "rgb(255, 255, 255)",
-        wolvesMoonlight: "rgb(160, 162, 163)",
         abShadow: "rgb(55, 58, 54)",
         abOffWhite: "#ededed",
       },
