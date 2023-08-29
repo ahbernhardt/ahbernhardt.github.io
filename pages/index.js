@@ -17,7 +17,8 @@ export default function Home() {
     };
     const navItems = [
         // {name: "home",link: ""},
-        // {name: "about",link: "about"},
+        {name: "about",link: "about"},
+        {name: "work",link: "work"},
     ]
     return (
         <>

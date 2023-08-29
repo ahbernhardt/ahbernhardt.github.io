@@ -45,18 +45,17 @@ const Nav = ({ navItems,  active, setActive }) => {
                     </div>
                 </a>
 
-                <ul className="hidden sm:w-1/2 sm:flex-row sm:show sm:flex">
+                <ul className="hidden sm:w-full sm:flex-row sm:show sm:flex self-end justify-end">
                         {navItems.map((item) => (
                         <Link
                             onClick={() => setActive(item.name)}
                             key={item.name}
-                            className="relative px-4 py-1 text-white transition-all hover:no-underline"
+                            className="relative pl-2 py-1 text-white transition-all hover:no-underline"
                             activeClass="active"
                             delay={0}
                             to={item.link}
                             spy
                             ignoreCancelEvents
-                            // smooth
                         >
                             <li className="cursor-pointer text-xl font-extrabold uppercase italic no-underline hover:no-underline xl:text-2xl">
                                 {active === item.name && (
