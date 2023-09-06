@@ -15,16 +15,11 @@ export default function Home() {
         },
         image: "",
     };
-    const navItems = [
-        // {name: "home",link: ""},
-        {name: "about",link: "about"},
-        {name: "work",link: "work"},
-    ]
     return (
         <>
             <SEO site={site}/>
-            <main className="max-w-4xl mx-auto justify-center overflow-hidden">
-                <Nav navItems={navItems}/>
+            <main className="max-w-4xl mx-auto justify-center">
+                <Nav />
                 <div className={`flex h-screen flex-col items-center justify-around`}>
                     <div className="relative text-center flex flex-col place-items-center">
                         <div className="relative aspect-square w-1/3 bg-contain justify-center object-contain">

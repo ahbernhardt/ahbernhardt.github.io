@@ -1,27 +1,13 @@
 import React from 'react'
-import { Link } from "react-scroll";
+import {Link} from "react-scroll";
 import Image from "next/legacy/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import MobileNav from "./mobileNav";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
 
-library.add(faBars);
-
-const Nav = ({ navItems,  active, setActive }) => {
-    const [showMobile, setShowMobile] = useState(false);
-    const handleMobileMenu = () => {
-        setShowMobile(!showMobile);
-    };
-
+const Nav = () => {
     return (
-            <motion.nav
-                className="top-0 sticky z-front flex w-full items-center py-2 px-4 border-b-[1px] overflow-hidden"
-                initial={"hidden"}
+        <div className="!sticky top-0 !z-10">
+            <nav className="w-full top-0 sticky flex py-2 border-b-[1px] mx-auto"
             >
-                <a className="w-1/2 flex flex-row relative duration-300 ease-in-out group-hover:text-white group"
+                <a className="w-1/3 flex flex-row relative duration-300 ease-in-out group-hover:text-white group"
                    href="https://ahbernhardt.github.io/"
                    target={"_blank"}
                    rel={"noreferrer"}
@@ -37,7 +23,8 @@ const Nav = ({ navItems,  active, setActive }) => {
                         />
                     </div>
                     <div className="relative w-auto my-auto ml-2">
-                        <div className="transition-all transform -translate-x-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-0">
+                        <div
+                            className="transition-all transform -translate-x-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-0">
                             <p className="text-[10px] text-white uppercase">
                                 - (YOU ARE ALREADY HERE)
                             </p>
@@ -45,54 +32,24 @@ const Nav = ({ navItems,  active, setActive }) => {
                     </div>
                 </a>
 
-                <ul className="hidden sm:w-full sm:flex-row sm:show sm:flex self-end justify-end">
-                        {navItems.map((item) => (
-                        <Link
-                            onClick={() => setActive(item.name)}
-                            key={item.name}
-                            className="relative pl-2 py-1 text-white transition-all hover:no-underline"
-                            activeClass="active"
-                            delay={0}
-                            to={item.link}
-                            spy
-                            ignoreCancelEvents
-                        >
-                            <li className="cursor-pointer text-xl font-extrabold uppercase italic no-underline hover:no-underline xl:text-2xl">
-                                {active === item.name && (
-                                    <motion.div
-                                        layoutId="pill"
-                                        style={{ borderRadius: 9999 }}
-                                        className="absolute inset-0 bg-abLake"
-                                        transition={{ duration: 0.6, type: "spring" }}
-                                    ></motion.div>
-                                )}
-                                <span
-                                    className={`${
-                                        active === item.name ? "" : "hover:text-abOrange"
-                                    } relative z-10`}
-                                >
-                              {item.name}
-                            </span>
-                            </li>
-                        </Link>
-                        ))}
+                <ul className="w-2/3 flex flex-row self-end justify-end">
+                    <Link
+                        className="relative text-white transition-all cursor-pointer text-base uppercase no-underline hover:no-underline"
+                        delay={0} to={"about"} spy smooth ignoreCancelEvents
+                    >
+                        about
+                    </Link>
+                    <Link
+                        className="relative text-white transition-all cursor-pointer text-base uppercase no-underline hover:no-underline"
+                        delay={0} to={"work"}
+                        spy smooth ignoreCancelEvents
+                    >
+                        {" "} -work
+                    </Link>
                 </ul>
-                <button
-                    className="absolute top-0 flex flex-row p-6 text-white sm:hidden"
-                    onClick={handleMobileMenu}
-                >
-                    <FontAwesomeIcon
-                        icon={faBars}
-                        className="flex w-6 items-center justify-center"
-                    />
-                </button>
-                {showMobile && (
-                    <MobileNav
-                        navItems={navItems}
-                        handleMobileMenu={handleMobileMenu}
-                    />
-                )}
-            </motion.nav>
+            </nav>
+        </div>
+
     );
 };
 export default Nav;
