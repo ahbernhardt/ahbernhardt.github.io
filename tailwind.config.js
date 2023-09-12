@@ -24,10 +24,14 @@ module.exports = {
     },
     extend: {
       colors: {
+        frost: "rgb(255, 255, 255)",
         mono14: "#202527",
-        abFrost: "rgb(255, 255, 255)",
-        abShadow: "rgb(55, 58, 54)",
-        abOffWhite: "#ededed",
+        offWhite: "#ededed",
+        redOrange: "#FF6A67",
+        shadow: "#373A36FF",
+        gray55: "#556271",
+        gray68: "#687789",
+        gray7B: "#7B8898"
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -5,7 +5,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head >
-          <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab" rel="stylesheet" />
+          {/* eslint-disable-next-line @next/next/google-font-display */}
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab" rel="stylesheet" />
       </Head>
       <body>
         <Main />
