@@ -20,7 +20,7 @@ export default function Home() {
         <>
             <SEO site={site}/>
             <Parallax />
-            <main className="w-full 3xl:w-2/3 justify-center mx-auto">
+            <main className="w-full px-[0.75rem] sm:px-[2rem] xl:px-[calc(50% - 40em)] 3xl:px-[2em] 3xl:max-w-[1488px] justify-center mx-auto">
                 <Nav/>
                 <div className="relative w-full h-fit py-[24%] mx-auto text-center">
                     <div className="font-josef text-[5.6rem] sm:text-[9rem] 3xl:text-[8.4rem] text-[#7B8898] font-bold italic uppercase">
