@@ -3,11 +3,118 @@
 @tailwind utilities;
 
 :root {
+  --parallax-scale: 0.5; /* pseudo-perspective depth, 0=deactivate */
+  --parallax-min-height: 100vh; /* could be overwritten by JS measurement if too low */
+  --container-offset-adjustment: 0;
 }
+
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  box-sizing: border-box;
 }
+
+/*html{*/
+/*  font-family: sans-serif;*/
+/*  -ms-text-size-adjust: 100%;*/
+/*  -webkit-text-size-adjust: 100%*/
+/*}*/
+
 body {
   color: rgb(255, 255, 255);
   background-color: #556271;
+  /*display: block;*/
+
+  position: relative;
+  z-index: -1;
+  /*top: 0;*/
+  transform-origin: top;
+  /*transform: scaleY(calc(1 - var(--parallax-scale)));*/
+  /*margin-top: calc(var(--container-offset-adjustment) + (-1 * max(100vh, var(--parallax-min-height))));*/
+  /*margin-bottom: calc(-1 * var(--container-offset-adjustment));*/
+}
+
+
+
+/* disable if requested for accessibility reasons */
+@media (prefers-reduced-motion) {
+  :root {
+    --parallax-scale: 0;
+  }
+}
+
+.parallax__layer {
+  transform-origin: top;
+  /*transform: scaleY(calc(1 / (1 - var(--parallax-scale))));*/
+}
+
+.parallax__layer--background {
+  position: relative;
+  z-index: -2;
+  top: 0;
+  height: 100%;
+  min-height: 100vh;
+  /*border: red solid 2px;*/
+  /*min-height: max(100vh, var(--parallax-min-height));*/
+}
+
+.parallax__layer--foreground {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  padding: 0 0.75rem;
+  z-index: 1;
+  /*border: yellow solid 2px;*/
+  /*display: block;*/
+}
+
+@media screen and (min-width: 768px) {
+  .parallax__layer--foreground{
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .parallax__layer--foreground{
+    padding: 0 calc(50% - 40em);
+  }
+}
+
+@media screen and (min-width: 1560px) {
+  .parallax__layer--foreground{
+    padding: 0 2em;
+    max-width: 1488px;
+  }
+}
+
+
+@media only screen and (min-width: 20em) {
+  .parallax__layer--foreground {
+    padding:0 0.75rem
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .parallax__layer--foreground {
+    padding:0 2rem
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .parallax__layer--foreground {
+    padding:0 2rem
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .parallax__layer--foreground {
+    padding:0 calc(50% - 40em)
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .parallax__layer--foreground {
+    max-width: 1488px;
+    padding: 0 2em
+  }
 }

@@ -19,10 +19,12 @@ export default function Home() {
     return (
         <>
             <SEO site={site}/>
+
             <Parallax />
-            <main className="w-full px-[0.75rem] sm:px-[2rem] xl:px-[calc(50% - 40em)] 3xl:px-[2em] 3xl:max-w-[1488px] justify-center mx-auto">
+
+            <main className="parallax__layer parallax__layer--foreground">
                 <Nav/>
-                <div className="relative w-full h-fit py-[24%] mx-auto text-center">
+                <section className="w-full h-fit mx-auto text-center my-44">
                     <div className="font-josef text-[5.6rem] sm:text-[9rem] 3xl:text-[8.4rem] text-[#7B8898] font-bold italic uppercase">
                         Welcome
                     </div>
@@ -38,7 +40,24 @@ export default function Home() {
                         </h3>
                     </div>
 
-                    <div className="absolute flex bottom-0 w-full py-[12px] px-6 text-xs tracking-[0.5px] font-neueHaas font-thin border-t-[1px] border-gray-200 uppercase justify-between">
+                </section>
+                <section className="w-full h-fit mx-auto text-center ">
+                    {/*<div className="font-josef text-[5.6rem] sm:text-[9rem] 3xl:text-[8.4rem] text-[#7B8898] font-bold italic uppercase">*/}
+                    {/*    Welcome*/}
+                    {/*</div>*/}
+
+                    {/*<div className="h-fit z-2">*/}
+                    {/*    <h3>Thank you for checking out my portfolio. This version is in-process.</h3>*/}
+                    {/*    <h3>In the mean time, please visit {' '}*/}
+                    {/*        <a href="https://anhbernhardt.com"*/}
+                    {/*           target="_blank"*/}
+                    {/*           rel="noreferrer"*/}
+                    {/*           className="text-[#FF6A67] hover:text-orange-400">*/}
+                    {/*            anhbernhart.com</a>*/}
+                    {/*    </h3>*/}
+                    {/*</div>*/}
+
+                    <div className="mt-6 flex py-2 w-full text-xs tracking-[0.5px] font-neueHaas font-thin border-t-[1px] border-gray-200 uppercase justify-between">
                        <div className="w-fit">
                            The personal site & portfolio
                        </div>
@@ -46,7 +65,7 @@ export default function Home() {
                             Anh Bernhardt
                         </div>
                     </div>
-                </div>
+                </section>
             </main>
         </>
     )
