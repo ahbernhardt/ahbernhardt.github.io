@@ -1,8 +1,6 @@
 import React from 'react'
 import SEO from "components/seo/seo"
-// import Image from "next/legacy/image"
 import Nav from "/components/nav/nav";
-// import {useScroll, useTransform} from "framer-motion";
 import Carousel from "/components/carousel/Carousel";
 
 const images = [
