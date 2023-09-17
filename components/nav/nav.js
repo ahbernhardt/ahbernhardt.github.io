@@ -4,15 +4,15 @@ import Image from "next/legacy/image";
 
 const Nav = () => {
     return (
-        <div className="!sticky top-0 z-front font-neueHaas font-thin">
-            <nav className="w-full top-0 sticky flex py-2 border-b-[1px] mx-auto px-6 xl:px-0 justify-between">
+        <div className={`sticky top-0 w-full z-front font-neueHaas font-thin mx-auto max-w-[1422px]`}>
+            <nav className="w-full top-0 sticky flex py-2 border-b-[1px] mx-auto px-3 sm:px-6 justify-between">
                 <a className="w-1/3 flex flex-row relative duration-300 ease-in-out group-hover:text-white group"
                    href="https://ahbernhardt.github.io/"
                    target={"_blank"}
                    rel={"noreferrer"}
                 >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <div className="w-[20px] object-center bg-cover my-auto">
+                    <div className="w-[30px] sm:w-[24px] object-center bg-cover my-auto">
                         <Image
                             src={"/favicon/logo.svg"}
                             alt="AB Logo"

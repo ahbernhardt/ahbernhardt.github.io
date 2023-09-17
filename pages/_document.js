@@ -1,5 +1,6 @@
 import React from 'react'
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, NextScript } from 'next/document'
+import Background from "/components/background/background";
 
 export default function Document() {
   return (
@@ -9,7 +10,8 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab" rel="stylesheet" />
       </Head>
       <body>
-        <Main />
+        <Background/>
+        {/*<Main />*/}
         <NextScript />
       </body>
     </Html>
