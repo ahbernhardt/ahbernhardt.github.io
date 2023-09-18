@@ -8,6 +8,7 @@ export default function Document() {
       <Head >
           {/* eslint-disable-next-line @next/next/google-font-display */}
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Slab&display=swap" rel="stylesheet"/>
       </Head>
       <body>
         <Background/>
