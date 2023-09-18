@@ -3,6 +3,7 @@ import SEO from "components/seo/seo"
 import Nav from "/components/nav/nav";
 import Carousel from "/components/carousel/Carousel";
 
+
 const images = [
     "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -30,10 +31,9 @@ export default function Home() {
     return (
         <>
             <SEO site={site}/>
-
             <Nav/>
 
-            <div className="relative flex flex-col my-24 max-w-[1422px] justify-center mx-auto">
+            <div className="relative flex flex-col my-12 max-w-[1422px] justify-center mx-auto">
                 <div className="font-josef text-[4.2rem] sm:text-[9rem] 3xl:text-[8.4rem] text-[#7B8898] font-extrabold uppercase text-center">
                     Welcome
                 </div>
@@ -50,7 +50,7 @@ export default function Home() {
                 </div>
 
 
-                <div className="max-w-[1422px] h-11/12 sm:h-2/3 mt-10 sm:my-12 3xl:my-24">
+                <div className="max-w-[1422px] h-11/12 sm:h-2/3 mt-6 sm:my-12 3xl:my-12">
                     <Carousel images={images}/>
                 </div>
             </div>

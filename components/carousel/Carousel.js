@@ -72,23 +72,47 @@ const Carousel = ({images}) => {
 
     return (
         <div className="w-full">
-            <div className="relative h-[30vh] sm:h-[50vh] w-full overflow-hidden">
+            <div className="relative h-[30vh] sm:h-[60vh] w-full overflow-hidden">
                 <AnimatePresence>
-                    <div className="w-11/12 sm:w-3/4 bg-cover mx-auto my-auto">
-                    <motion.img
-                        key={currentIndex}
-                        src={images[currentIndex]}
-                        initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
-                        animate="visible"
-                        exit="exit"
-                        variants={slideVariants}
-                        className="w-full h-full bg-cover"
-                    />
-                    </div>
+                    {/*<div className="w-11/12 sm:w-full mx-auto my-auto">*/}
+                        <motion.div
+                            key={currentIndex}
+                            src={images[currentIndex]}
+                            initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
+                            animate="visible"
+                            exit="exit"
+                            variants={slideVariants}
+                            className="absolute top-0 left-0 w-11/12 sm:w-3/4 h-full"
+                        >
+                            <div className="relative flex h-full w-full items-center justify-center mx-auto">
+                                {/* Border */}
+                                <div className="absolute right-[20%] flex h-full w-[570px] items-center justify-center text-2xl shadow-xl shadow-wolvesMidnight
+                                    border-[12px] border-[#687789]"
+                                />
+
+                                {/* Top image layer*/}
+                                <div className="absolute -right-[70px] flex w-11/12 max-w-[600px] aspect-[1/1.125] p-4 bg-[#687789] hover:scale-95">
+                                    <div className="w-full h-full bg-cover bg-center bg-no-repeat" style={{
+                                        backgroundImage: `url(${images[currentIndex]})`,
+                                    }}/>
+                                </div>
+
+                                <div className="flex flex-col absolute top-40 left-32">
+                                    <div className="font-neueHaas mb-2 text-[14px] sm:text-[16px] xl:text-[18px] 3xl:text-[20px]">
+                                        PORTFOLIO
+                                    </div>
+
+                                    <a className="font-abril text-[32px] sm:text-[36px] xl:text-[44px] 3xl:text-[56px]">
+                                        Project Title
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
+                    {/*</div>*/}
                 </AnimatePresence>
 
                 <div className="hidden w-full sm:flex sm:show justify-between">
-                    <motion.div
+                    <motion.a
                         variants={slidersVariants}
                         whileHover="hover"
                         className="left-0 absolute top-0 bottom-0 my-auto w-auto h-fit uppercase text-sm sm:text-base
@@ -96,8 +120,8 @@ const Carousel = ({images}) => {
                         onClick={handlePrevious}
                     >
                         Previous
-                    </motion.div>
-                    <motion.div
+                    </motion.a>
+                    <motion.a
                         variants={slidersVariants}
                         whileHover="hover"
                         className="right-0 absolute top-0 bottom-0 my-auto w-auto h-fit uppercase text-sm sm:text-base
@@ -105,7 +129,7 @@ const Carousel = ({images}) => {
                         onClick={handleNext}
                     >
                         Next
-                    </motion.div>
+                    </motion.a>
                 </div>
             </div>
             <div className="mt-8 sm:mt-12 flex justify-center gap-3 sm:gap-4">

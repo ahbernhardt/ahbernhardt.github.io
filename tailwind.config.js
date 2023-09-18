@@ -20,7 +20,8 @@ module.exports = {
     },
     fontFamily: {
       josef: ['Josefin Slab', "serif"],
-      neueHaas: ['Neue-Haas-Gotesk', "sans-serif"]
+      neueHaas: ['Neue-Haas-Gotesk', "sans-serif"],
+      abril: ['Abril Fatface', "cursive"]
     },
     extend: {
       colors: {
