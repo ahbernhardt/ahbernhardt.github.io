@@ -72,7 +72,7 @@ const Carousel = ({images}) => {
 
     return (
         <div className="w-full">
-            <div className="relative h-[30vh] sm:h-[60vh] w-full overflow-hidden">
+            <div className="relative h-[30vh] xl:h-[55vh] 3xl:h-[60vh] w-full overflow-hidden">
                 <AnimatePresence>
                     {/*<div className="w-11/12 sm:w-full mx-auto my-auto">*/}
                         <motion.div
@@ -86,23 +86,23 @@ const Carousel = ({images}) => {
                         >
                             <div className="relative flex h-full w-full items-center justify-center mx-auto">
                                 {/* Border */}
-                                <div className="absolute right-[20%] flex h-full w-[570px] items-center justify-center text-2xl shadow-xl shadow-wolvesMidnight
-                                    border-[12px] border-[#687789]"
+                                <div className="absolute right-[18%] 3xl:right-[20%] flex h-full xl:w-[360px] 3xl:w-[570px] items-center justify-center text-2xl shadow-xl shadow-wolvesMidnight
+                                    xl:border-[8px] 3xl:border-[12px] border-[#687789]"
                                 />
 
                                 {/* Top image layer*/}
-                                <div className="absolute -right-[70px] flex w-11/12 max-w-[600px] aspect-[1/1.125] p-4 bg-[#687789] hover:scale-95">
+                                <div className="absolute right-[36px] 3xl:-right-[70px] flex w-11/12 xl:w-[300px] max-w-[600px] aspect-[1/1.125] p-2 3xl:p-4 bg-[#687789] hover:scale-95">
                                     <div className="w-full h-full bg-cover bg-center bg-no-repeat" style={{
                                         backgroundImage: `url(${images[currentIndex]})`,
                                     }}/>
                                 </div>
 
-                                <div className="flex flex-col absolute top-40 left-32">
-                                    <div className="font-neueHaas mb-2 text-[14px] sm:text-[16px] xl:text-[18px] 3xl:text-[20px]">
+                                <div className="flex flex-col absolute top-28 left-44 3xl:top-40 3xl:left-32">
+                                    <div className="font-neueHaas xl:mb-[4px] 3xl:mb-[8px] text-[14px] sm:text-[16px] xl:text-[18px] 3xl:text-[20px] leading-none">
                                         PORTFOLIO
                                     </div>
 
-                                    <a className="font-abril text-[32px] sm:text-[36px] xl:text-[44px] 3xl:text-[56px]">
+                                    <a className="font-abril text-[32px] sm:text-[36px] xl:text-[44px] 3xl:text-[56px] leading-none">
                                         Project Title
                                     </a>
                                 </div>
@@ -115,7 +115,7 @@ const Carousel = ({images}) => {
                     <motion.a
                         variants={slidersVariants}
                         whileHover="hover"
-                        className="left-0 absolute top-0 bottom-0 my-auto w-auto h-fit uppercase text-sm sm:text-base
+                        className="left-2 absolute top-0 bottom-0 my-auto w-auto h-fit uppercase text-sm sm:text-sm 3xl:text-base
                         after:content[''] after:absolute after:-right-16 after:top-1/2 after:block after:w-14 after:border-t-[1px] after:h-[2px] hover:after:-right-0 after:duration-500 transition"
                         onClick={handlePrevious}
                     >
@@ -124,7 +124,7 @@ const Carousel = ({images}) => {
                     <motion.a
                         variants={slidersVariants}
                         whileHover="hover"
-                        className="right-0 absolute top-0 bottom-0 my-auto w-auto h-fit uppercase text-sm sm:text-base
+                        className="right-2 absolute top-0 bottom-0 my-auto w-auto h-fit uppercase text-sm sm:text-sm 3xl:text-base
                         before:content[''] before:absolute before:-left-16 before:top-1/2 before:block before:w-14 before:border-t-[1px] before:h-[2px] hover:before:-left-0 before:duration-500 transition"
                         onClick={handleNext}
                     >
@@ -132,11 +132,11 @@ const Carousel = ({images}) => {
                     </motion.a>
                 </div>
             </div>
-            <div className="mt-8 sm:mt-12 flex justify-center gap-3 sm:gap-4">
+            <div className="mt-6 sm:mt-8 3xl:mt-12 flex justify-center gap-3 sm:gap-4">
                 {images.map((_, index) => (
                     <motion.div
                         key={index}
-                        className={`aspect-square w-2 sm:w-3 border-[1px] border-white rounded-full ${currentIndex === index ? "bg-white" : ""}`}
+                        className={`aspect-square w-[8px] sm:w-[10px] 3xl:w-[12px] border-[1px] border-white rounded-full ${currentIndex === index ? "bg-white" : ""}`}
                         onClick={() => handleDotClick(index)}
                         initial="initial"
                         animate={currentIndex === index ? "animate" : ""}

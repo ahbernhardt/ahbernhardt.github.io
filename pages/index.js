@@ -33,8 +33,8 @@ export default function Home() {
             <SEO site={site}/>
             <Nav/>
 
-            <div className="relative flex flex-col my-12 max-w-[1422px] justify-center mx-auto">
-                <div className="font-josef text-[4.2rem] sm:text-[9rem] 3xl:text-[8.4rem] text-[#7B8898] font-extrabold uppercase text-center">
+            <div className="relative flex flex-col my-12 sm:my-6 xl:my-6 3xl:my-12 max-w-[1422px] justify-center mx-auto">
+                <div className="font-josef text-[4.2rem] sm:text-[4.8rem] xl:text-[5.6rem] 3xl:text-[8.4rem] text-[#7B8898] font-extrabold uppercase text-center leading-none">
                     Welcome
                 </div>
 
@@ -50,7 +50,7 @@ export default function Home() {
                 </div>
 
 
-                <div className="max-w-[1422px] h-11/12 sm:h-2/3 mt-6 sm:my-12 3xl:my-12">
+                <div className="w-11/12 xl:w-3/4 3xl:max-w-[1422px] h-11/12 sm:h-2/3 mt-6 sm:mt-8 xl:mt-6 3xl:my-12 mx-auto">
                     <Carousel images={images}/>
                 </div>
             </div>
