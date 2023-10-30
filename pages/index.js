@@ -31,11 +31,11 @@ export default function Home() {
             <Nav/>
 
             <main className="flex flex-col my-12 sm:my-6 xl:my-6 3xl:my-12 max-w-[1422px] justify-center mx-auto">
-                <div className="font-abril text-[4rem] sm:text-[4.8rem] xl:text-[5.6rem] 3xl:text-[8.4rem] text-white font-extrabold uppercase text-center leading-none">
+                <div className="font-abril text-[4rem] sm:text-[4.8rem] xl:text-[5.6rem] 3xl:text-[8.4rem] text-white font-extrabold uppercase text-center leading-none z-1">
                     Welcome
                 </div>
 
-                <div className="px-3 sm:px-0 text-center  mb-6">
+                <div className="px-3 sm:px-0 text-center mb-6 z-1">
                     <h3>Thank you for checking out my portfolio. This version is in-process.</h3>
                     <h3>In the mean time, please visit {' '}
                         <a href="https://anhbernhardt.com"
