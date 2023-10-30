@@ -41,8 +41,8 @@ export default function Home() {
                         <a href="https://anhbernhardt.com"
                            target="_blank"
                            rel="noreferrer"
-                           className="text-[#FF6A67] hover:text-orange-400">
-                            anhbernhart.com</a>
+                           className="text-[#FF6A67] hover:text-orange-400 cursor-pointer">
+                            anhbernhardt.com</a>
                     </h3>
                 </div>
 
