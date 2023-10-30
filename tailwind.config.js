@@ -21,13 +21,14 @@ module.exports = {
     fontFamily: {
       josef: ['Josefin Slab', "serif"],
       neueHaas: ['Neue-Haas-Gotesk', "sans-serif"],
-      abril: ['Abril Fatface', "cursive"]
+      abril: ['Abril Fatface', "cursive"],
+      poppins: ['Poppins', "sans-serif"]
     },
     extend: {
       colors: {
         frost: "rgb(255, 255, 255)",
         mono14: "#202527",
-        offWhite: "#ededed",
+        offWhite: "#dedede",
         redOrange: "#FF6A67",
         shadow: "#373A36FF",
         gray55: "#556271",
