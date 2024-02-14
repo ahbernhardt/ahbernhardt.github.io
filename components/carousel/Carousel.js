@@ -40,7 +40,7 @@ const Carousel = ({images}) => {
             y: 0,
         },
         animate: {
-            y: -6,
+            y: -4,
             scale: 1.2,
             transition: {type: "spring", stiffness: 50, damping: "10"},
         },
@@ -72,7 +72,7 @@ const Carousel = ({images}) => {
 
     return (
         <div className="w-full flex flex-col">
-            <div className="relative min-h-[560px] sm:h-[680px] w-full justify-center">
+            <div className="relative min-h-[560px] sm:h-[620px] w-full justify-center">
                 <AnimatePresence>
                     <motion.div
                         key={currentIndex}
@@ -85,18 +85,18 @@ const Carousel = ({images}) => {
                     >
                         <div className="flex flex-col-reverse lg:flex lg:w-fit lg:h-full items-center justify-center mx-auto">
                             {/* Image layer*/}
-                            <div className="lg:absolute lg:right-0 w-full lg:w-[50%] xl:w-[60%]  hover:scale-95 lg:border-[12px] sm:border-frost bg-cover bg-center bg-no-repeat">
+                            <div className="lg:absolute lg:right-0 w-[75%] lg:w-[48%] xl:w-[60%] hover:scale-95 lg:border-[12px] sm:border-frost bg-cover bg-center bg-no-repeat">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img src={`${images[currentIndex]}`} alt="" className="w-full object-cover"/>
                             </div>
 
-                            <div className="static w-fit flex flex-col text-center lg:text-left lg:absolute left-0 mb-[1.5em] text-offWhite leading-none">
+                            <div className="static w-fit flex flex-col text-center lg:text-left lg:absolute left-0 mb-[1em] text-offWhite leading-none">
                                 <div
                                     className="font-poppins xl:mb-[4px] 3xl:mb-[8px] text-[12px] sm:text-[16px] xl:text-[18px] 3xl:text-[20px] tracking-[3px] uppercase">
                                     portfolio
                                 </div>
 
-                                <a className="font-abril text-[32px] sm:text-[36px] xl:text-[44px] 3xl:text-[56px] leading-[1.2]">
+                                <a className="font-abril text-[28px] sm:text-[36px] xl:text-[44px] 3xl:text-[56px] leading-[1.2]">
                                     Project Title
                                 </a>
 
@@ -132,11 +132,11 @@ const Carousel = ({images}) => {
                 </div>
 
 
-                <div className="absolute bottom-0 w-full flex justify-center gap-3 sm:gap-4">
+                <div className="absolute -bottom-4 w-full flex justify-center gap-3 sm:gap-4">
                     {images.map((_, index) => (
                         <motion.div
                             key={index}
-                            className={`aspect-square w-[6px] sm:w-[8px] 3xl:w-[10px] border-[1px] border-white rounded-full ${currentIndex === index ? "bg-white" : ""}`}
+                            className={`aspect-square w-[6px] lg:w-[8px] border-[1px] border-white rounded-full ${currentIndex === index ? "bg-white" : ""}`}
                             onClick={() => handleDotClick(index)}
                             initial="initial"
                             animate={currentIndex === index ? "animate" : ""}
@@ -145,8 +145,7 @@ const Carousel = ({images}) => {
                         ></motion.div>
                     ))}
                 </div>
-
-        </div>
+            </div>
         </div>
 
     );

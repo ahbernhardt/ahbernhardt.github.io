@@ -30,14 +30,14 @@ export default function Home() {
             <SEO site={site}/>
             <Nav/>
 
-            <main className="flex flex-col my-12 sm:my-6 xl:my-6 3xl:my-12 max-w-[1422px] justify-center mx-auto">
-                <div className="font-abril text-[4rem] sm:text-[4.8rem] xl:text-[5.6rem] 3xl:text-[8.4rem] text-white font-extrabold uppercase text-center leading-none z-1">
+            <main className="flex flex-col my-6 max-w-[1422px] justify-center mx-auto">
+                <div className="font-abril text-[2rem] sm:text-[2.8rem] md:text-[4.4rem] text-white font-extrabold uppercase text-center leading-none z-1">
                     Welcome
                 </div>
 
                 <div className="px-3 sm:px-0 text-center mb-6 z-1">
-                    <h3>Thank you for checking out my portfolio. This version is in-process.</h3>
-                    <h3>In the mean time, please visit {' '}
+                    <h3 className='text-[12px] sm:text-base'>Thank you for checking out my portfolio. This version is in-process.</h3>
+                    <h3 className='text-[12px] sm:text-base'>In the mean time, please visit {' '}
                         <a href="https://anhbernhardt.com"
                            target="_blank"
                            rel="noreferrer"
@@ -47,7 +47,7 @@ export default function Home() {
                 </div>
 
 
-                <div className="w-11/12 mx-auto mt-6 sm:mt-20 ">
+                <div className="w-11/12 mx-auto mt-6">
                     <Carousel images={images}/>
                 </div>
             </main>
