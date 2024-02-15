@@ -2,6 +2,7 @@ import React from 'react'
 import SEO from "components/seo/seo"
 import Nav from "/components/nav/nav";
 import Carousel from "/components/carousel/Carousel";
+import Gravity from "/components/gravity/Gravity"
 
 
 const images = [
@@ -31,7 +32,7 @@ export default function Home() {
             <Nav/>
 
             <main className="flex flex-col my-6 max-w-[1422px] justify-center mx-auto">
-                <div className="font-abril text-[2rem] sm:text-[2.8rem] md:text-[4.4rem] text-white font-extrabold uppercase text-center leading-none z-1">
+                <div className="font-abril text-[2rem] sm:text-[2.8rem] lg:text-[3.2rem] text-white font-extrabold uppercase text-center leading-none z-1">
                     Welcome
                 </div>
 
@@ -46,10 +47,15 @@ export default function Home() {
                     </h3>
                 </div>
 
-
                 <div className="w-11/12 mx-auto mt-6">
                     <Carousel images={images}/>
-                </div>
+                </div> 
+
+
+                {/* <div className="w-11/12 mx-auto ">
+                    <Gravity />
+                    <canvas></canvas>
+                </div> */}
             </main>
 
 

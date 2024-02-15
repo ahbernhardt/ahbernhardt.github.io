@@ -1,5 +1,4 @@
-{
-  "extends": "next/core-web-vitals",
+{ 
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "Node",
