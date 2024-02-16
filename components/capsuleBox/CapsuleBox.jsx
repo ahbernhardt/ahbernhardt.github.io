@@ -414,7 +414,7 @@
 /* eslint-disable react/no-string-refs */
 import React from "react";
 import Matter from "matter-js"
-import { faUpRightAndDownLeftFromCenter } from "@fortawesome/free-solid-svg-icons";
+
 class CapsuleBox extends React.Component {
   constructor(props){
     super(props);
@@ -440,7 +440,6 @@ class CapsuleBox extends React.Component {
         element: this.refs.scene,
         engine: engine,
         options: {
-          wireframes: false,
           pixelRatio: 2,
           width: width,
           height: height,
@@ -580,7 +579,7 @@ class CapsuleBox extends React.Component {
 
   render() {
     return (
-        <div className="relative h-[70vh] overflow-hidden">
+        <div className="relative h-full overflow-hidden">
           <div ref="scene" className="h-fit" />
         </div>
     );

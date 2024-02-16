@@ -1,16 +1,15 @@
 import React from 'react'
 import SEO from "components/seo/seo"
 import Nav from "/components/nav/nav";
-import Carousel from "/components/carousel/Carousel";
-import Gravity from "/components/gravity/Gravity"
-import CapsuleBox from '/components/capsuleBox/CapsuleBox';
+// import Carousel from "/components/carousel/Carousel";
+// import CapsuleBox from '/components/capsuleBox/CapsuleBox';
+import Contact from "/components/contact/Contact"
 
-
-const images = [
-    "https://duruthemes.com/demo/html/fd/images/slider/01.jpg",
-    "https://duruthemes.com/demo/html/fd/images/slider/02.jpg",
-    "https://duruthemes.com/demo/html/fd/images/slider/03.jpg",
-];
+// const images = [
+//     "https://duruthemes.com/demo/html/fd/images/slider/01.jpg",
+//     "https://duruthemes.com/demo/html/fd/images/slider/02.jpg",
+//     "https://duruthemes.com/demo/html/fd/images/slider/03.jpg",
+// ];
 
 export default function Home() {
     const site = {
@@ -51,14 +50,9 @@ export default function Home() {
                 {/* <div className="w-11/12 mx-auto mt-6">
                     <Carousel images={images}/>
                 </div>  */}
-                <div className="my-auto">
-                    <CapsuleBox />
-                </div>
-
-
-                {/* <div className="w-11/12 mx-auto">
-                    <Gravity />
-                </div> */}
+                
+              {/* <CapsuleBox /> */}
+              <Contact />
             </main>
 
 
