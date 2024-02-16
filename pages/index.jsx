@@ -3,6 +3,7 @@ import SEO from "components/seo/seo"
 import Nav from "/components/nav/nav";
 import Carousel from "/components/carousel/Carousel";
 import Gravity from "/components/gravity/Gravity"
+import CapsuleBox from '/components/capsuleBox/CapsuleBox';
 
 
 const images = [
@@ -47,14 +48,16 @@ export default function Home() {
                     </h3>
                 </div>
 
-                <div className="w-11/12 mx-auto mt-6">
+                {/* <div className="w-11/12 mx-auto mt-6">
                     <Carousel images={images}/>
-                </div> 
+                </div>  */}
+                <div className="my-auto">
+                    <CapsuleBox />
+                </div>
 
 
-                {/* <div className="w-11/12 mx-auto ">
+                {/* <div className="w-11/12 mx-auto">
                     <Gravity />
-                    <canvas></canvas>
                 </div> */}
             </main>
 
