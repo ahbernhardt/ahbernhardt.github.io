@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import Matter from "matter-js";
-import Image from "next/image";
 
 const Contact = () => {
   const sectionRef = useRef(null);
@@ -29,23 +28,20 @@ const Contact = () => {
     let Composite = Matter.Composite;
     let Svg = Matter.Svg;
     let Vertices = Matter.Vertices;
-    let Common = Matter.Common;
 
-    // Common.setDecomp(require('poly-decomp'));
 
     let engine = Engine.create({});
 
     let render = Render.create({
       element: [
+        sectionRef.current,
         circleRef.current,
         textRef.current,
         gitRef.current,
 
         instagramRef.current,
         linkedInRef.current,
-        emailRef.current,
-
-        document.body
+        emailRef.current
       ],
       engine: engine,
       canvas: canvasRef.current,
@@ -55,16 +51,29 @@ const Contact = () => {
         background: "transparent",
         wireframes: false,
         wireframeBackground: "transparent",
+        pixelRatio: window.devicePixelRatio
       },
     });
 
     // add bodies
+
+    const getInTouch = Bodies.rectangle(width/2, height-60, width/5, 30, {
+      isStatic: true,
+      label: "in-touch",
+      render: {
+        sprite: {
+          texture: "https://ahbernhardt.github.io/images/png/get-in-touch-1.png",
+        }
+      },
+    });
+
+
     if (typeof fetch !== "undefined") {
       var select = function (root, selector) {
         return Array.prototype.slice.call(root.querySelectorAll(selector));
       };
 
-      var loadSvg = function(url) {
+      const loadSvg = function(url) {
         return fetch(url)
           .then(function (response) {
             return response.text();
@@ -74,43 +83,41 @@ const Contact = () => {
           });
       };
 
-      [
-        "./get.svg",
-        "./in.svg",
-        "./touch.svg",
-      ].forEach(function (path, i) 
-        {loadSvg(path).then(function (root) {
+        {loadSvg("https://ahbernhardt.github.io/svg/get-in-touch.svg").then(function (root) {
           const vertexSets = select(root, "path").map(function (path) {
-            return Vertices.scale(Svg.pathToVertices(path, 10), 1, 1);
+            return Vertices.scale(Svg.pathToVertices(path, 10), 3.125, 3);
           });
 
           Composite.add(engine.world,
             Bodies.fromVertices(
-              100 ,
-              height-150,
+              width/1.8 ,
+              height - 60,
               vertexSets,
               {
                 isStatic: true,
                 render: {
-                  fillStyle: "#e6e7e8",
+                  fillStyle: "transparent",
+                  // fillStyle: "#2d2d2d",
                   lineWidth: 0.000001,
                 },
-              },true,));
-            });
+              },
+            true));
+          });
         }
-      );
 
-        // loadSvg('https://ahbernhardt.github.io/svg/git.svg').then(function(root) {
-        //   const vertexSets = select(root, 'path').map(function(path) {return Vertices.scale(Svg.pathToVertices(path, 10), 1, 1); });
-        //   Composite.add(engine.world, Bodies.fromVertices(50, height-100, vertexSets, {
-        //     isStatic: true,
-        //     render: {
-        //       fillStyle: "#e6e7e8",
-        //       strokeStyle: "transparent",
-        //       lineWidth: 0.000001,
-        //     },
-        //   }, true));
-        // });
+    }
+
+    function getRandom(min, max) {
+      const floatRandom = Math.random()
+    
+      const difference = max - min
+    
+      // random between 0 and the difference
+      const random = Math.round(difference * floatRandom)
+    
+      const randomWithinRange = random + min
+    
+      return randomWithinRange
     }
 
     // create bounds
@@ -133,25 +140,14 @@ const Contact = () => {
       label: "rightWall",
     });
 
-    const getInTouch = Bodies.rectangle(width / 2, height - 60, 1600, 160, {
-      isStatic: true,
-      label: "in-touch",
-      render: {
-        sprite: {
-          texture: "https://ahbernhardt.github.io/images/png/get-in-touch.png",
-          xScale: 1.2,
-          yScale: 1.2,
-        },
-      },
-    });
-
-    const circle = Bodies.circle(Math.random(400), 0, 40, {
+    const circle = Bodies.circle(getRandom(100,480), 0, 40, {
       restitution: 0.9,
       render: {
         fillStyle: "red",
       },
     });
-    const instagram = Bodies.circle(Math.random(800), 0, 20, {
+
+    const instagram = Bodies.circle(width/3.5, 0, 20, {
       restitution: 0.2,
       render: {
         sprite: {
@@ -163,8 +159,8 @@ const Contact = () => {
       url: "https://www.instagram.com/ah_bernhardt",
     });
 
-    const linkedIn = Bodies.rectangle(Math.random(600), 0, 140, 42, {
-      chamfer: { radius: 40 },
+    const linkedIn = Bodies.rectangle(width/3, 0, 140, 40, {
+      chamfer: { radius: 20 },
       render: {
         sprite: {
           texture:
@@ -176,7 +172,7 @@ const Contact = () => {
       url: "https://www.linkedin.com/in/anhbernhardt/",
     });
 
-    const email = Bodies.rectangle(Math.random(1200), 0, 110, 38, {
+    const email = Bodies.rectangle(width /2, 0, 110, 38, {
       chamfer: { radius: 30 },
       render: {
         sprite: {
@@ -189,7 +185,7 @@ const Contact = () => {
       url: "mailto:anhbernhardt@gmail.com",
     });
 
-    var star = Bodies.rectangle(80, 60, 42, 40, {
+    var star = Bodies.rectangle(width/2.4, 0, 42, 40, {
       chamfer: { radius: 20 },
       render: {
         sprite: {
@@ -286,17 +282,14 @@ const Contact = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-3 mx-auto  -mt-[11vh] flex h-[80vh] w-full flex-col overflow-hidden"
+      className="relative z-3 mx-auto flex -mt-[11vh] h-[80vh] w-full flex-col"
     >
-      <canvas ref={canvasRef} className="flex h-[96%] w-full flex-col">
-        <div ref={circleRef}></div>
+      <canvas ref={canvasRef} className="overflow-hidden">
+        {/* <div ref={circleRef}></div> */}
         <div ref={instagramRef}></div>
         <div ref={linkedInRef}></div>
         <div ref={emailRef}></div>
-        <div ref={textRef}></div>
-        <div ref={gitRef}>
-          <Image src="./svg/git.svg" width={100} height={30}/>
-        </div>
+        <div ref={gitRef} className="w-full max-h-[240px] object-cover bg-cover"></div>
       </canvas>
 
       <div className="flex h-6 w-full border-4 border-white">
