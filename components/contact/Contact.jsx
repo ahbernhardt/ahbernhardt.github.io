@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import Matter from "matter-js";
+import Image from "next/image";
 
 const Contact = () => {
   const sectionRef = useRef(null);
@@ -7,8 +8,12 @@ const Contact = () => {
 
   const textRef = useRef(null);
   const circleRef = useRef(null);
-  const instaqramRef = useRef(null);
+  const gitRef = useRef(null);
+
+  const instagramRef = useRef(null);
   const linkedInRef = useRef(null);
+  const emailRef = useRef(null)
+  
 
   useEffect(() => {
     let Engine = Matter.Engine;
@@ -17,13 +22,31 @@ const Contact = () => {
     let Bodies = Matter.Bodies;
     let MouseConstraint = Matter.MouseConstraint;
     let Mouse = Matter.Mouse;
+
     let height = window.innerHeight;
     let width = window.innerWidth;
+
+    let Composite = Matter.Composite;
+    let Svg = Matter.Svg;
+    let Vertices = Matter.Vertices;
+    let Common = Matter.Common;
+
+    // Common.setDecomp(require('poly-decomp'));
 
     let engine = Engine.create({});
 
     let render = Render.create({
-      element: [circleRef.current, instaqramRef.current, linkedInRef.current],
+      element: [
+        circleRef.current,
+        textRef.current,
+        gitRef.current,
+
+        instagramRef.current,
+        linkedInRef.current,
+        emailRef.current,
+
+        document.body
+      ],
       engine: engine,
       canvas: canvasRef.current,
       options: {
@@ -34,6 +57,61 @@ const Contact = () => {
         wireframeBackground: "transparent",
       },
     });
+
+    // add bodies
+    if (typeof fetch !== "undefined") {
+      var select = function (root, selector) {
+        return Array.prototype.slice.call(root.querySelectorAll(selector));
+      };
+
+      var loadSvg = function(url) {
+        return fetch(url)
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (raw) {
+            return new window.DOMParser().parseFromString(raw, "image/svg+xml");
+          });
+      };
+
+      [
+        "./get.svg",
+        "./in.svg",
+        "./touch.svg",
+      ].forEach(function (path, i) 
+        {loadSvg(path).then(function (root) {
+          const vertexSets = select(root, "path").map(function (path) {
+            return Vertices.scale(Svg.pathToVertices(path, 10), 1, 1);
+          });
+
+          Composite.add(engine.world,
+            Bodies.fromVertices(
+              100 ,
+              height-150,
+              vertexSets,
+              {
+                isStatic: true,
+                render: {
+                  fillStyle: "#e6e7e8",
+                  lineWidth: 0.000001,
+                },
+              },true,));
+            });
+        }
+      );
+
+        // loadSvg('https://ahbernhardt.github.io/svg/git.svg').then(function(root) {
+        //   const vertexSets = select(root, 'path').map(function(path) {return Vertices.scale(Svg.pathToVertices(path, 10), 1, 1); });
+        //   Composite.add(engine.world, Bodies.fromVertices(50, height-100, vertexSets, {
+        //     isStatic: true,
+        //     render: {
+        //       fillStyle: "#e6e7e8",
+        //       strokeStyle: "transparent",
+        //       lineWidth: 0.000001,
+        //     },
+        //   }, true));
+        // });
+    }
 
     // create bounds
     const floor = Bodies.rectangle(-10, height + 10, width * 10, 30, {
@@ -55,6 +133,18 @@ const Contact = () => {
       label: "rightWall",
     });
 
+    const getInTouch = Bodies.rectangle(width / 2, height - 60, 1600, 160, {
+      isStatic: true,
+      label: "in-touch",
+      render: {
+        sprite: {
+          texture: "https://ahbernhardt.github.io/images/png/get-in-touch.png",
+          xScale: 1.2,
+          yScale: 1.2,
+        },
+      },
+    });
+
     const circle = Bodies.circle(Math.random(400), 0, 40, {
       restitution: 0.9,
       render: {
@@ -66,8 +156,8 @@ const Contact = () => {
       render: {
         sprite: {
           texture: "https://i.imgur.com/RStSwfG.png",
-          xScale: 0.6,
-          yScale: 0.6,
+          xScale: 0.5,
+          yScale: 0.5,
         },
       },
       url: "https://www.instagram.com/ah_bernhardt",
@@ -77,12 +167,26 @@ const Contact = () => {
       chamfer: { radius: 40 },
       render: {
         sprite: {
-          texture: "https://ahbernhardt.github.io/pix/ln-white.png",
+          texture:
+            "https://ahbernhardt.github.io/images/png/linkedIn-white.png",
           xScale: 0.6,
           yScale: 0.6,
         },
       },
       url: "https://www.linkedin.com/in/anhbernhardt/",
+    });
+
+    const email = Bodies.rectangle(Math.random(1200), 0, 110, 38, {
+      chamfer: { radius: 30 },
+      render: {
+        sprite: {
+          texture:
+            "https://ahbernhardt.github.io/images/png/email-white.png",
+          xScale: 0.4,
+          yScale: 0.4,
+        },
+      },
+      url: "mailto:anhbernhardt@gmail.com",
     });
 
     var star = Bodies.rectangle(80, 60, 42, 40, {
@@ -99,12 +203,15 @@ const Contact = () => {
       floor,
       wallLeft,
       wallRight,
+      getInTouch,
+
       circle,
       star,
 
       //  Social
       instagram,
       linkedIn,
+      email
     ]);
 
     // add mouse control
@@ -179,17 +286,19 @@ const Contact = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative mx-auto -mt-[11vh]  flex h-[80vh] w-full flex-col overflow-hidden z-3"
+      className="relative z-3 mx-auto  -mt-[11vh] flex h-[80vh] w-full flex-col overflow-hidden"
     >
-      <canvas ref={canvasRef} className="h-[96%] w-full flex flex-col">
+      <canvas ref={canvasRef} className="flex h-[96%] w-full flex-col">
         <div ref={circleRef}></div>
-        <div ref={instaqramRef}></div>
+        <div ref={instagramRef}></div>
         <div ref={linkedInRef}></div>
-        <div ref={textRef} className="absolute bottom-0 text-8xl text-center text-white">
-            Get in touch
+        <div ref={emailRef}></div>
+        <div ref={textRef}></div>
+        <div ref={gitRef}>
+          <Image src="./svg/git.svg" width={100} height={30}/>
         </div>
       </canvas>
-      
+
       <div className="flex h-6 w-full border-4 border-white">
         <div className="h-full w-full bg-red-200"></div>
         <div className="h-full w-full border-x-4  border-white bg-blue-200"></div>
@@ -198,7 +307,6 @@ const Contact = () => {
         <div className="h-full w-full bg-purple-200"></div>
         <div className="h-full w-full border-l-4  border-white bg-yellow-200"></div>
       </div>
-      
     </section>
   );
 };
