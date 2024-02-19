@@ -23,7 +23,8 @@ const Contact = () => {
     let Mouse = Matter.Mouse;
 
     let height = window.innerHeight;
-    let width = window.innerWidth;
+    let width = window.innerWidth-24;
+    console.log(width)
 
     let Composite = Matter.Composite;
     let Svg = Matter.Svg;
@@ -54,15 +55,18 @@ const Contact = () => {
         pixelRatio: window.devicePixelRatio
       },
     });
-
+   
     // add bodies
-
-    const getInTouch = Bodies.rectangle(width/2, height-60, width/5, 30, {
+    const getInTouch = Bodies.rectangle(width/2, width > 768 ? height-60 : height-30, width*40, 30, {
       isStatic: true,
       label: "in-touch",
       render: {
         sprite: {
-          texture: "https://ahbernhardt.github.io/images/png/get-in-touch-1.png",
+          texture: `
+          ${width > 768 
+            ? "https://ahbernhardt.github.io/images/png/get-in-touch.png" 
+            : "https://ahbernhardt.github.io/images/png/contact.png"} 
+          `,
         }
       },
     });
@@ -83,21 +87,25 @@ const Contact = () => {
           });
       };
 
-        {loadSvg("https://ahbernhardt.github.io/svg/get-in-touch.svg").then(function (root) {
+        {(width > 768 
+          ? loadSvg("https://ahbernhardt.github.io/svg/get-in-touch.svg")
+          : loadSvg("https://ahbernhardt.github.io/svg/contact.svg")).then(function (root) {
           const vertexSets = select(root, "path").map(function (path) {
-            return Vertices.scale(Svg.pathToVertices(path, 10), 3.125, 3);
+            return Vertices.scale(
+              Svg.pathToVertices(path, 10),
+              width > 768 ? 2.25 : 1.25 ,  width > 768 ? 2.25 : 1.25);
           });
 
           Composite.add(engine.world,
             Bodies.fromVertices(
               width/1.8 ,
-              height - 60,
+              width > 768 ? height - 60 : height - 30 ,
               vertexSets,
               {
                 isStatic: true,
                 render: {
                   fillStyle: "transparent",
-                  // fillStyle: "#2d2d2d",
+                  // fillStyle: "#fff",
                   lineWidth: 0.000001,
                 },
               },
@@ -282,14 +290,14 @@ const Contact = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-3 mx-auto flex -mt-[11vh] h-[80vh] w-full flex-col"
+      className="relative mx-auto flex -mt-[11vh] h-[80vh] w-full flex-col"
     >
-      <canvas ref={canvasRef} className="overflow-hidden">
-        {/* <div ref={circleRef}></div> */}
+      <canvas ref={canvasRef} className="mx-auto flex h-[80vh] w-full flex-col overflow-hidden">
+        <div ref={circleRef}></div> 
         <div ref={instagramRef}></div>
         <div ref={linkedInRef}></div>
         <div ref={emailRef}></div>
-        <div ref={gitRef} className="w-full max-h-[240px] object-cover bg-cover"></div>
+        <div ref={gitRef} className="w-full object-cover bg-cover"></div>
       </canvas>
 
       <div className="flex h-6 w-full border-4 border-white">
