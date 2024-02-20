@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import {Fade} from "react-awesome-reveal";
 import Dlo from "/public/projects/statement/images/2223_DLO_Statement_Hero.jpg";
 
 const TheHero = () => {

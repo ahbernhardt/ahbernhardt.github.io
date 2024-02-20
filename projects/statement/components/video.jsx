@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import styled from "styled-components"
 import ReturnBanner from "./returnBanner";
 import VideoModal from "./videoModal";
-import Fade from "react-reveal/Fade";
+import {Fade} from "react-awesome-reveal";
 import videoThumb from "/public/projects/statement/images/video_thumb.png";
 const Video = () => {
   const [videoModal, setVideoModal] = useState(false);

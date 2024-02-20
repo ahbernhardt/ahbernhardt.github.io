@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Fade from "react-reveal/Fade";
+import {Fade} from "react-awesome-reveal";
 import styled from "styled-components";
 import { details } from "/projects/statement/data/details";
 import DetailsModal from "./DetailsModal";

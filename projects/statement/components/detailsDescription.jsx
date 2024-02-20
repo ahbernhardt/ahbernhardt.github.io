@@ -1,5 +1,5 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import {Fade} from "react-awesome-reveal";
 import threeLogo from "/public/projects/statement/images/Timberwolves_bw.png";
 import styled from "styled-components";
 

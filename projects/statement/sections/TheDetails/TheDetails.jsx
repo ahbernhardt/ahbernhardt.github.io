@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import {Fade} from "react-awesome-reveal";
 import DetailsModal from "./DetailsModal";
 import { details } from "/projects/statement/data/details";
 import AccentText from "/projects/statement/components/accentText";

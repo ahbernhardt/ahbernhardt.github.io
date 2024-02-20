@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import {Fade} from "react-awesome-reveal";
 import { games } from "/projects/statement/data/games";
 // import AccentTextRight from "../../components/AccentText/right";
 // import dloJaden from "../../images/TheLook/Look 10.jpg";

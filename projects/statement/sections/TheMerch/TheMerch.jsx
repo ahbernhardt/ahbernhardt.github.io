@@ -1,5 +1,5 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import {Fade} from "react-awesome-reveal";
 import MerchGallery from "/projects/statement/components/merch";
 import SectionHeader from "/projects/statement/components/sectionHeader";
 
