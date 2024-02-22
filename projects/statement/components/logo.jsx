@@ -1,9 +1,8 @@
 import React from "react";
-import logo from "/public/projects/statement/images/MTimberwolves_Primary_White-01.png";
 
 const Logo = () => (
-  <div className="pt-0 w-11 md:w-14 m-auto">
-    <img src={logo} alt="Timberwolves Logo" className="bg-center" />
+  <div className="flex aspect-square w-8 md:w-12 m-auto bg-cover bg-center justify-center">
+    <img src={"https://ahbernhardt.github.io/blob/master/public/projects/statement/images/wolves-white.png"} alt="Timberwolves Logo" className="w-full object-contain" />
   </div>
 );
 

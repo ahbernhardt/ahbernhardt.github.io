@@ -25,13 +25,11 @@ const Layout = ({ children }) => {
   ) : (
     <motion.div
       ref={pageRef}
-      className="w-full"
+      className="w-full bg-black z-1"
       initial="hidden"
       variants={afterLoading}
       animate={pageControls}
     >
-      {/*<Seo />*/}
-      <Seo image={OG} />
       <Navigation />
       <main>{children}</main>
       <Footer />

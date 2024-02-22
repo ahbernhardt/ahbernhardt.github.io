@@ -7,7 +7,7 @@ const TheHero = () => {
   return (
     <section id="statement" className="w-full bg-[#080808] text-right">
       <Fade duration={2400}>
-        <Background>
+        <div className="bg-[url('https://ahbernhardt.github.io/projects/statement/images/2223_DLO_Statement_Hero.jpg')]">
           {/*<div className="w-full bg-Dlo bg-contain text-wolvesWhite bg-no-repeat">*/}
           <TextBox>
             <Fade right duration={3000} delay={300}>
@@ -25,7 +25,7 @@ const TheHero = () => {
             </Fade>
           </TextBox>
           {/*</div>*/}
-        </Background>
+        </div>
       </Fade>
     </section>
   );
@@ -70,9 +70,6 @@ const Background = styled.div`
     background: linear-gradient(to top, black 30%, transparent 100%);
   }
 
-  // @media screen and (max-width: 768px) {
-  //   padding-top: 2%;
-  // }
   @media screen and (min-width: 769px) and (max-width: 1023px) {
     height: 100%;
     padding-top: 6%;

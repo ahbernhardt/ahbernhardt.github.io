@@ -18,7 +18,9 @@ const Navigation = () => {
       ) : (
         <Container>
           <NavLink to="#" onClick={scrollToTop} smooth={true} duration={700}>
-            <Logo />
+          <div className="flex aspect-square w-8 md:w-12 m-auto bg-cover bg-center justify-center">
+            <img src={"https://ahbernhardt.github.io/projects/statement/images/wolves-white.png"} alt="Timberwolves Logo" className="object-contain" />
+          </div>
           </NavLink>
           <NavInner>
             <NavLink

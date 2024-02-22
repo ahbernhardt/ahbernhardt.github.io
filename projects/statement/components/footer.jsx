@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "/public/projects/statement/images/MTimberwolves_Statement_Stacked_White.png";
+import logo from "/public/projects/statement/images/statement-white.png";
 
 const FooterLogo = () => (
   <div className="w-56 m-auto">
