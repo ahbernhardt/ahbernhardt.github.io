@@ -1,6 +1,5 @@
 import React from "react";
 import { Html, Head, NextScript, Main } from "next/document";
-import Background from "/components/background/background";
 
 export default function Document() {
   return (
@@ -17,7 +16,6 @@ export default function Document() {
         />
       </Head>
       <body>
-        <Background />
         <Main />
         <NextScript />
       </body>

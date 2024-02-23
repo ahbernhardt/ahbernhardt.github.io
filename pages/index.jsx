@@ -4,7 +4,7 @@ import Nav from "/components/nav/nav";
 // import Carousel from "/components/carousel/Carousel";
 // import CapsuleBox from '/components/capsuleBox/CapsuleBox';
 import Contact from "/components/contact/Contact"
-
+import Background from "/components/background/background";
 // const images = [
 //     "https://duruthemes.com/demo/html/fd/images/slider/01.jpg",
 //     "https://duruthemes.com/demo/html/fd/images/slider/02.jpg",
@@ -29,6 +29,7 @@ export default function Home() {
     return (
         <>
             <SEO site={site}/>
+            <Background />
             <Nav/>
 
             <main className="flex flex-col my-6 max-w-[1422px] justify-center mx-auto">

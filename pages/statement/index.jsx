@@ -12,9 +12,9 @@ const IndexPage = () => {
 //   const { allHomeGames } = useFetchAllData();
 //   console.log(allHomeGames);
   return (
-    <Layout className="text-wolvesWhite">
+    <Layout className="text-white">
       <div className="fadeIn">
-        <Video />
+        {/* <Video /> */}
         <TheHero />
         <TheDetails />
         <TheMerch />

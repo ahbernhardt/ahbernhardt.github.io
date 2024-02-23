@@ -5,24 +5,14 @@ import { useOnInView } from "/utils/useOnInView";
 // animation variants
 import { afterLoading } from "../constants/animationVariants";
 
-import Loading from "./loading";
 import Navigation from "./nav";
 import Footer from "./footer";
 import OG from "/public/projects/statement/images/TW22-Statement-Edition-OG.png";
 
 const Layout = ({ children }) => {
-  const [loading, setLoading] = useState(true);
   const { ref: pageRef, controls: pageControls } = useOnInView();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2200);
-  }, []);
-
-  return loading ? (
-    <Loading />
-  ) : (
+  return (
     <motion.div
       ref={pageRef}
       className="w-full bg-black z-1"
