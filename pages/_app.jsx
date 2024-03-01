@@ -2,7 +2,6 @@ import React from 'react'
 import '/styles/globals.css'
 import '/styles/fonts.css'
 import '/styles/background.css'
-import "/styles/statement.css";
 import "/styles/statement-carousel.css";
 import dynamic from 'next/dynamic'
 import Script from 'next/script'

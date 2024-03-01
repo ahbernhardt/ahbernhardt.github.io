@@ -1,6 +1,6 @@
 import React from "react";
 import {Fade} from "react-awesome-reveal";
-import threeLogo from "/public/projects/statement/images/Timberwolves_bw.png";
+const threeLogo = "https://ahbernhardt.github.io/projects/statement/images/Timberwolves_bw.png";
 import styled from "styled-components";
 
 const DetailsInfoDescription = () => {

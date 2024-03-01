@@ -10,7 +10,7 @@ const customStyles = {
     bottom: "50%",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    backgroundColor: "var(--wolves-white)",
+    backgroundColor: "#fff",
     width: "80vw",
     height: "52vh",
     padding: "0",

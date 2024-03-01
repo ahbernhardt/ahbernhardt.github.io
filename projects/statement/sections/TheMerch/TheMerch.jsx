@@ -7,7 +7,7 @@ const TheMerch = () => {
   return (
     <section
       id="merch"
-      className="text-wolvesWhite bg-RetailPaper flex flex-col relative bg-right pb-32
+      className="text-white bg-RetailPaper flex flex-col relative bg-right pb-32
         before:border-transparent before:block before:absolute before:h-[30%] before:top-0 before:w-full before:bg-FromTopToBottom
         after:border-transparent after:block after:absolute after:h-[15%] after:bottom-0 after:w-full after:bg-FromBottomToTop
         "

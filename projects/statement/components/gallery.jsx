@@ -7,10 +7,10 @@ const Gallery = ({ gallerySlide, changeGrid, imageIdx }) => {
         id="gallery"
         className="grid grid-cols-2 grid-flow-row gap-2 overflow-auto max-h-[70vw] md:max-h-[30vw]"
       >
-        {gallerySlide.map((image, idx) => (
+        {gallerySlide.map((image, i) => (
           <a
-            key={image.id}
-            onClick={() => changeGrid(idx)}
+            key={i}
+            onClick={() => changeGrid(i)}
             className="cursor-pointer"
             href={image.url}
             target="_blank"
@@ -18,9 +18,9 @@ const Gallery = ({ gallerySlide, changeGrid, imageIdx }) => {
           >
             <img
               className={
-                imageIdx === idx
-                  ? "saturate-100 w-full h-full object-cover fillAvail bg-wolvesWhite"
-                  : "saturate-100 w-full h-full object-cover fillAvail bg-wolvesWhite"
+                imageIdx === i
+                  ? "saturate-100 w-full h-full object-cover fillAvail bg-white"
+                  : "saturate-100 w-full h-full object-cover fillAvail bg-white"
               }
               src={image.image}
               alt={image.description}

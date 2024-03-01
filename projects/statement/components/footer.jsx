@@ -1,9 +1,9 @@
 import React from "react";
-import logo from "/public/projects/statement/images/statement-white.png";
 
 const FooterLogo = () => (
-  <div className="w-56 m-auto">
-    <img src={logo} alt="Timberwolves Logo" className="center" />
+  <div className="w-56 aspect-video m-auto bg-cover">
+    <img src="https://ahbernhardt.github.io/projects/statement/images/statement-white.png" alt="Timberwolves Logo" 
+    className="object-contain" />
   </div>
 );
 

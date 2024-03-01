@@ -8,7 +8,7 @@ export const useOnInView = () => {
 
     useEffect(() => {
         if (inView) {
-            controls.start("show");
+            controls.start("visible");
         } else {
             controls.start("hidden");
         }

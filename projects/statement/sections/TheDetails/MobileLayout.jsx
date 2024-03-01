@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { details } from "/projects/statement/data/details";
 import DetailsModal from "./DetailsModal";
 
-import aura from "/public/projects/statement/images/detail/AURA.jpg";
-import belt from "/public/projects/statement/images/detail/BELT_LOGO.jpg";
-import jordan from "/public/projects/statement/images/detail/JORDAN.jpg";
-import lockup from "/public/projects/statement/images/detail/LOCKUP.jpg";
-import timberLogo from "/public/projects/statement/images/detail/TIMBERWOLVES_LOGO.jpg";
+const aura = "https://ahbernhardt.github.io/projects/statement/images/detail/AURA.jpg";
+const belt = "https://ahbernhardt.github.io/projects/statement/images/detail/BELT_LOGO.jpg";
+const jordan = "https://ahbernhardt.github.io/projects/statement/images/detail/JORDAN.jpg";
+const lockup = "https://ahbernhardt.github.io/projects/statement/images/detail/LOCKUP.jpg";
+const timberLogo = "https://ahbernhardt.github.io/projects/statement/images/detail/TIMBERWOLVES_LOGO.jpg";
 
 const MobileLayout = ({ setOpenModal, openModal }) => {
   const [detail, setDetail] = useState([]);

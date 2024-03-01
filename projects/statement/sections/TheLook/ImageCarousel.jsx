@@ -1,56 +1,45 @@
 import React from "react";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import image1 from "/public/projects/statement/images/TheLook/Look 01.jpg";
-import image2 from "/public/projects/statement/images/TheLook/Look 02.jpg";
-import image3 from "/public/projects/statement/images/TheLook/Look 03.jpg";
-import image4 from "/public/projects/statement/images/TheLook/Look 04.jpg";
-// import image5 from "../../images/TheLook/Look 05.jpg";
-import image6 from "/public/projects/statement/images/TheLook/Look 06.jpg";
-import image7 from "/public/projects/statement/images/TheLook/Look 07.jpg";
-import image8 from "/public/projects/statement/images/TheLook/Look 08.jpg";
-import image9 from "/public/projects/statement/images/TheLook/Look 09.jpg";
-import image10 from "/public/projects/statement/images/TheLook/Look 10.jpg";
 
 const data = [
   {
-    image: `${image1}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 01.jpg",
     caption: "chest-mark",
   },
   {
-    image: `${image2}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 02.jpg",
     caption: "Dlo",
   },
   {
-    image: `${image3}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 03.jpg",
     caption: "Jaden",
   },
   {
-    image: `${image4}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 04.jpg",
     caption: "Dlo-closeup",
   },
   // {
-  //   image: `${image5}`,
+  //   image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 05.jpg",
   //   caption: "chest-mark",
   // },
   {
-    image: `${image6}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 06.jpg",
     caption: "shorts",
   },
   {
-    image: `${image7}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 07.jpg",
     caption: "whole-jersey",
   },
   {
-    image: `${image8}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 08.jpg",
     caption: "back",
   },
   {
-    image: `${image9}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 09.jpg",
     caption: "chest-mark-1",
   },
   {
-    image: `${image10}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 10.jpg",
     caption: "Dlo-Jaden",
   },
 ];

@@ -2,17 +2,18 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 import DetailsModal from "./DetailsModal";
-import { details } from "/projects/statement/data/details";
-import AccentText from "/projects/statement/components/accentText";
+import { details } from "../../data/details";
+import AccentText from "../../components/accentText";
 import MobileLayout from "./MobileLayout";
 
-// import jersey from "../../images/Statement_Jersey.png";
-import jersey from "/public/projects/statement/images/TW_2223_StatementRender_Front_Final.png";
-import aura from "/public/projects/statement/images/detail/AURA.jpg";
-import belt from "/public/projects/statement/images/detail/BELT_LOGO.jpg";
-import jordan from "/public/projects/statement/images/detail/JORDAN.jpg";
-import chest from "/public/projects/statement/images/detail/LOCKUP.jpg";
-import timberLogo from "/public/projects/statement/images/detail/TIMBERWOLVES_LOGO.jpg";
+const jersey = "https://ahbernhardt.github.io/projects/statement/images/TW_2223_StatementRender_Front_Final.png";
+const aura = "https://ahbernhardt.github.io/projects/statement/images/detail/AURA.jpg";
+const belt = "https://ahbernhardt.github.io/projects/statement/images/detail/BELT_LOGO.jpg";
+const jordan = "https://ahbernhardt.github.io/projects/statement/images/detail/JORDAN.jpg";
+const chest = "https://ahbernhardt.github.io/projects/statement/images/detail/LOCKUP.jpg";
+const timberLogo = "https://ahbernhardt.github.io/projects/statement/images/detail/TIMBERWOLVES_LOGO.jpg";
+
+const detailsBackground = "https://ahbernhardt.github.io/projects/statement/images/tree-bark/Tree-bark_Statement_1.jpg";
 
 const TheDetails = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -53,8 +54,6 @@ const TheDetails = () => {
         ) : (
           <Wrapper>
             <JerseyImage />
-            {/*<img src={jersey} alt="statement-jersey" />*/}
-            {/*</JerseyImage>*/}
             <DetailWrapper>
               <ImageBox>
                 <Fade duration={2500}>
@@ -114,6 +113,7 @@ const TheDetails = () => {
 };
 
 export default TheDetails;
+
 const Wrapper = styled.div`
   width: 100%;
   position: relative;
@@ -232,10 +232,6 @@ const ImageBox = styled.div`
     }
   }
 `;
-
-
-
-import detailsBackground from "/public/projects/statement/images/tree-bark/Tree-bark_Statement_1.jpg";
 
  const BackgroundImage = styled.div`
   display: flex;

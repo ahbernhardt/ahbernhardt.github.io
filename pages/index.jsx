@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import SEO from "components/seo/seo"
 import Nav from "/components/nav/nav";
 // import Carousel from "/components/carousel/Carousel";
@@ -27,7 +27,7 @@ export default function Home() {
 
 
     return (
-        <>
+        <Fragment className="overflow-hidden">
             <SEO site={site}/>
             <Background />
             <Nav/>
@@ -67,6 +67,6 @@ export default function Home() {
                     </div>
                 </div>
             </footer>
-        </>
+        </Fragment>
     )
 }

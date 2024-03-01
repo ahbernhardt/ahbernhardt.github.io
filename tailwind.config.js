@@ -1,3 +1,8 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const { 
+  default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +12,7 @@ module.exports = {
     './utils/**/*.{js,ts,jsx,tsx,mdx}',
     './public/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: "class",
   theme: {
     // breakpoints have been tailored to the most popular screen sizes
     screens: {
@@ -35,11 +41,7 @@ module.exports = {
         gray68: "#687789",
         gray7B: "#7B8898"
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-            'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      backgroundImage: {},
       zIndex: {
         1: "1",
         2: "2",
@@ -55,7 +57,20 @@ module.exports = {
         back: "-1000",
       },
     },
+    important: true,
     variants: {},
-    plugins: [],
+    plugins: [addVariableForColors],
   },
 };
+
+function addVariableForColors({addBase, theme}){
+  let allColors = flattenColorPalette(theme("colors"));
+
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key,val]) => [ `--${key}`, val]),
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

@@ -1,16 +1,10 @@
-import aura from "/public/projects/statement/images/detail/AURA.jpg";
-import belt from "/public/projects/statement/images/detail/BELT_LOGO.jpg";
-import jordan from "/public/projects/statement/images/detail/JORDAN.jpg";
-import lockup from "/public/projects/statement/images/detail/LOCKUP.jpg";
-import timberLogo from "/public/projects/statement/images/detail/TIMBERWOLVES_LOGO.jpg";
-
 export const details = [
   {
     id: 0,
     name: "The Aura Partner Patch",
     description:
       "The Minnesota Timberwolves are proud to feature Aura, a leading provider of all-in-one digital security for consumers, as the team’s jersey patch partner and official digital security provider.",
-    image: `${aura}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/detail/AURA.jpg",
     classes: "img one",
   },
   {
@@ -18,7 +12,7 @@ export const details = [
     name: "The Jumpman Logo- Jordan",
     description:
       "Giving Jordan Brand a ubiquitous presence across the league, the Jumpman logo appears on the right shoulder of the jersey for all 30 Statement Edition uniforms. Each season, the Statement Edition designs set the tone for key matchups and are inspired by NBA teams making a bold statement every time they step onto the court — a natural connection to Jordan Brand’s namesake and his approach to the game.",
-    image: `${jordan}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/detail/JORDAN.jpg",
     classes: "img two",
   },
   {
@@ -26,7 +20,7 @@ export const details = [
     name: "The Chest Wordmark",
     description:
       "The Timberwolves chestmark features subtle, fang-like detailing",
-    image: `${lockup}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/detail/LOOKUP.jpg",
     classes: "img three",
   },
   {
@@ -34,7 +28,7 @@ export const details = [
     name: "The Belt Buckle",
     description:
       "An Aurora Green illuminated North Star shines on both the ominous-looking belt buckle and short logo.",
-    image: `${belt}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/detail/BELT_LOGO.jpg",
     classes: "img four",
   },
   {
@@ -43,7 +37,7 @@ export const details = [
     description:
       "As the most beloved element in the Timberwolves brand identity and jersey collection, an Aurora Green" +
       " illuminated North Star shines on both the ominous-looking belt buckle and short logo.",
-    image: `${timberLogo}`,
+    image: "https://ahbernhardt.github.io/projects/statement/images/detail/TIMBERWOLVES_LOGO.jpg",
     classes: "img five",
   },
 ];
