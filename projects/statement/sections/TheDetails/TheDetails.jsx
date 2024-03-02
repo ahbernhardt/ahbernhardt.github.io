@@ -6,14 +6,14 @@ import { details } from "../../data/details";
 import AccentText from "../../components/accentText";
 import MobileLayout from "./MobileLayout";
 
-const jersey = "https://ahbernhardt.github.io/projects/statement/images/TW_2223_StatementRender_Front_Final.png";
-const aura = "https://ahbernhardt.github.io/projects/statement/images/detail/AURA.jpg";
-const belt = "https://ahbernhardt.github.io/projects/statement/images/detail/BELT_LOGO.jpg";
-const jordan = "https://ahbernhardt.github.io/projects/statement/images/detail/JORDAN.jpg";
-const chest = "https://ahbernhardt.github.io/projects/statement/images/detail/LOCKUP.jpg";
-const timberLogo = "https://ahbernhardt.github.io/projects/statement/images/detail/TIMBERWOLVES_LOGO.jpg";
+const jersey = "https://ahbernhardt.github.io/projects/statement/TW_2223_StatementRender_Front_Final.png";
+const aura = "https://ahbernhardt.github.io/projects/statement/detail/AURA.jpg";
+const belt = "https://ahbernhardt.github.io/projects/statement/detail/BELT_LOGO.jpg";
+const jordan = "https://ahbernhardt.github.io/projects/statement/detail/JORDAN.jpg";
+const chest = "https://ahbernhardt.github.io/projects/statement/detail/LOCKUP.jpg";
+const timberLogo = "https://ahbernhardt.github.io/projects/statement/detail/TIMBERWOLVES_LOGO.jpg";
 
-const detailsBackground = "https://ahbernhardt.github.io/projects/statement/images/tree-bark/Tree-bark_Statement_1.jpg";
+const detailsBackground = "https://ahbernhardt.github.io/projects/statement/Tree-bark_Statement_1.jpg";
 
 const TheDetails = () => {
   const [openModal, setOpenModal] = useState(false);

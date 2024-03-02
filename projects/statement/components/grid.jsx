@@ -7,7 +7,7 @@ import { useOnInView } from "/utils/useOnInView";
 // animation variants
 import { fadeInVariant } from "../constants/animationVariants";
 import { merchCollection } from "/projects/statement/data/merchCollection";
-import arrowDown from "/public/projects/statement/images/arrowDown.svg";
+const arrowDown = "https://ahbernhardt.github.io/projects/statement/arrowDown.svg";
 
 const Grid = () => {
   const [imageIdx, setImageIdx] = useState(0);

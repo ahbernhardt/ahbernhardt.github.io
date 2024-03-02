@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
-const Dlo = "https://ahbernhardt.github.io/projects/statement/images/2223_DLO_Statement_Hero.jpg";
+const Dlo = "https://ahbernhardt.github.io/projects/statement/2223_DLO_Statement_Hero.jpg";
 
 const TheHero = () => {
   return (
     <section id="statement" className="w-screen text-right flex bg-cover">
       <Fade duration={2400}>
         <Background />
-          {/* <div className="w-full bg-Dlo bg-contain text-wolvesWhite bg-no-repeat"> */}
+          <div className="w-full bg-Dlo bg-contain text-wolvesWhite bg-no-repeat">
           <TextBox>
             <Fade right duration={3000} delay={300}>
               <h2>
@@ -24,7 +24,7 @@ const TheHero = () => {
               </h2>
             </Fade>
           </TextBox>
-          {/* </div> */}
+          </div>
       </Fade>
     </section>
   );

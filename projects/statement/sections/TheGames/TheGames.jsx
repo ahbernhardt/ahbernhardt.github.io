@@ -5,7 +5,10 @@ import { games } from "/projects/statement/data/games";
 // import AccentTextRight from "../../components/AccentText/right";
 // import dloJaden from "../../images/TheLook/Look 10.jpg";
 import GameSectionHeader from "/projects/statement/components/gameHeader";
-import gameBG from "/public/projects/statement/images/Paper-strip.png";
+const gameBG = "https://ahbernhardt.github.io/projects/statement/Paper-strip.png";
+
+const detailsBackground = "https://ahbernhardt.github.io/projects/statement/Dlo-Jaden.png";
+const mobile = "https://ahbernhardt.github.io/projects/statement/dlo-jaden-mobile.png";
 
 const TheGames = () => {
   return (
@@ -261,11 +264,7 @@ const Column = styled.div`
   padding: 0 0.5rem;
 `;
 
-
-import detailsBackground from "/public/projects/statement/images/Dlo-Jaden.png";
-import mobile from "/public/projects/statement/images/dlo-jaden-mobile.png";
-
-export const BackgroundImage = styled.div`
+const BackgroundImage = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;

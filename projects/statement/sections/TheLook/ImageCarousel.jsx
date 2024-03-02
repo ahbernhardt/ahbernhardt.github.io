@@ -3,43 +3,43 @@ import { Carousel } from "react-responsive-carousel";
 
 const data = [
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 01.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-01.jpg",
     caption: "chest-mark",
   },
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 02.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-02.jpg",
     caption: "Dlo",
   },
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 03.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-03.jpg",
     caption: "Jaden",
   },
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 04.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-04.jpg",
     caption: "Dlo-closeup",
   },
   // {
-  //   image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 05.jpg",
+  //   image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-05.jpg",
   //   caption: "chest-mark",
   // },
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 06.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-06.jpg",
     caption: "shorts",
   },
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 07.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-07.jpg",
     caption: "whole-jersey",
   },
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 08.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-08.jpg",
     caption: "back",
   },
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 09.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-09.jpg",
     caption: "chest-mark-1",
   },
   {
-    image: "https://ahbernhardt.github.io/projects/statement/images/TheLook/Look 10.jpg",
+    image: "https://ahbernhardt.github.io/projects/statement/TheLook/Look-10.jpg",
     caption: "Dlo-Jaden",
   },
 ];
