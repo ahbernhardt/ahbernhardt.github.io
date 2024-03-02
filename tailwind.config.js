@@ -1,16 +1,18 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const svgToDataUri = require("mini-svg-data-uri");
 const colors = require("tailwindcss/colors");
-const { 
-  default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+
+
+const { flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './*.html',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './utils/**/*.{js,ts,jsx,tsx,mdx}',
-    './public/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,jsx,mdx}',
+    './components/**/*.{js,jsx,mdx}',
+    './utils/**/*.{js,jsx,mdx}',
+    './public/**/*.{js,jsx,mdx}',
   ],
   darkMode: "class",
   theme: {
@@ -41,7 +43,9 @@ module.exports = {
         gray68: "#687789",
         gray7B: "#7B8898"
       },
-      backgroundImage: {},
+      backgroundImage: {
+        dot: ["radial-gradient(#2d2d2d_1px,transparent_1px)", "background-size:32px_32px"],
+      },
       zIndex: {
         1: "1",
         2: "2",
@@ -58,19 +62,32 @@ module.exports = {
       },
     },
     important: true,
-    variants: {},
-    plugins: [addVariableForColors],
-  },
-};
-
-function addVariableForColors({addBase, theme}){
-  let allColors = flattenColorPalette(theme("colors"));
-
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key,val]) => [ `--${key}`, val]),
-  );
-
-  addBase({
-    ":root": newVars,
-  });
+    plugins: [
+      addVariablesForColors,
+      // function ({ matchUtilities, theme }) {
+      //   matchUtilities(
+      //     {
+      //       "bg-dot": (value) => ({
+      //         backgroundImage: `url("${svgToDataUri(
+      //           `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+      //         )}")`,
+      //       }),
+      //     },
+      //     { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      //   ),
+      // }
+    ],
+  }
 }
+   
+
+  function addVariablesForColors({ addBase, theme }) {
+    let allColors = flattenColorPalette(theme("colors"));
+    let newVars = Object.fromEntries(
+      Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    );
+   
+    addBase({
+      ":root": newVars,
+    });
+  }

@@ -290,14 +290,14 @@ const Contact = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative mx-auto flex -mt-[11vh] h-[80vh] w-full flex-col"
+      className="flex flex-col w-full mx-auto"
     >
-      <canvas ref={canvasRef} className="mx-auto flex h-[80vh] w-full flex-col overflow-hidden">
+      <canvas ref={canvasRef} className="mx-auto flex w-full flex-col overflow-hidden">
         <div ref={circleRef}></div> 
         <div ref={instagramRef}></div>
         <div ref={linkedInRef}></div>
         <div ref={emailRef}></div>
-        <div ref={gitRef} className="w-full object-cover bg-cover"></div>
+        <div ref={gitRef}></div>
       </canvas>
 
       <div className="flex h-6 w-full border-4 border-white">
