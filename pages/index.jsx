@@ -35,7 +35,7 @@ export default function Home() {
 
       <Nav />
 
-      <div class="absolute inset-0 h-full w-full bg-black bg-[radial-gradient(#2d2d2d_1px,transparent_1px)] [background-size:24px_24px]"></div>
+      <div className="absolute inset-0 h-full w-full bg-black bg-[radial-gradient(#2d2d2d_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
       <main className="mx-auto my-6 flex h-fit max-w-[1422px] flex-col justify-center">
         <div className="z-1 text-center text-[2rem] font-extrabold uppercase leading-none text-white sm:text-[2.8rem] lg:text-[3.2rem] tracking-wide">
