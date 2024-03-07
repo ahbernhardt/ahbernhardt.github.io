@@ -300,14 +300,14 @@ const Contact = () => {
         <div ref={gitRef}></div>
       </canvas>
 
-      <div className="flex h-6 w-full border-4 border-white">
+      {/* <div className="flex h-6 w-full border-4 border-white">
         <div className="h-full w-full bg-red-200"></div>
         <div className="h-full w-full border-x-4  border-white bg-blue-200"></div>
         <div className="h-full w-full bg-orange-200"></div>
         <div className="h-full w-full border-x-4  border-white bg-green-200"></div>
         <div className="h-full w-full bg-purple-200"></div>
         <div className="h-full w-full border-l-4  border-white bg-yellow-200"></div>
-      </div>
+      </div> */}
     </section>
   );
 };

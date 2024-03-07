@@ -1,18 +1,23 @@
-import React, { Fragment } from "react";
+import React, { useRef } from "react";
 import SEO from "components/seo/seo";
 import Nav from "/components/nav/nav";
 // import Carousel from "/components/carousel/Carousel";
 // import CapsuleBox from '/components/capsuleBox/CapsuleBox';
 import Contact from "/components/contact/Contact";
-import Background from "/components/background/background";
-import { DotBackground } from "/components/background/dotgrid";
-import { cn } from "@/lib/utils";
+// import Background from "/components/background/background";
+// import { cn } from "@/lib/utils";
 
-// const images = [
-//     "https://duruthemes.com/demo/html/fd/images/slider/01.jpg",
-//     "https://duruthemes.com/demo/html/fd/images/slider/02.jpg",
-//     "https://duruthemes.com/demo/html/fd/images/slider/03.jpg",
-// ];
+import { useScroll, useTransform } from "framer-motion";
+// import { WavyBackground } from "/components/ui/wavy-background";
+// import { LampContainer } from "/components/ui/lamp";
+import { Sparkles } from "/components/ui/sparkle";
+
+
+const images = [
+    "https://duruthemes.com/demo/html/fd/images/slider/01.jpg",
+    "https://duruthemes.com/demo/html/fd/images/slider/02.jpg",
+    "https://duruthemes.com/demo/html/fd/images/slider/03.jpg",
+];
 
 export default function Home() {
   const site = {
@@ -27,6 +32,18 @@ export default function Home() {
     image: "",
   };
 
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+
   return (
     <>
       <SEO site={site} />
@@ -38,30 +55,41 @@ export default function Home() {
       <div className="absolute inset-0 h-full w-full bg-black bg-[radial-gradient(#2d2d2d_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
       <main className="mx-auto my-6 flex h-fit max-w-[1422px] flex-col justify-center">
-        <div className="z-1 text-center text-[2rem] font-extrabold uppercase leading-none text-white sm:text-[2.8rem] lg:text-[3.2rem] tracking-wide">
-          Welcome
+        <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-md">
+          <div className="z-1 mt-12 mb-6">
+            <div className="z-1 text-center text-2xl font-extrabold uppercase leading-none tracking-wide text-white md:text-4xl lg:text-7xl">
+              Welcome
+            </div>
+            <p className="inter-var mt-4 text-center text-base font-normal text-white md:text-lg">
+              Thank you for checking out my portfolio. This version is in-process.
+            </p>
+            <p className="inter-var text-center text-base font-normal text-white md:text-lg">
+              In the mean time, please visit{" "}
+              <a
+                href="https://anhbernhardt.com"
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer text-[#FF6A67] hover:text-orange-400"
+              >
+                anhbernhardt.com
+              </a>
+            </p>
+          </div>
+          
+          <div className="relative h-6 w-[60rem] mx-auto">
+            {/* Gradients */}
+            <div className="absolute inset-x-20 top-0 h-[2px] w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm" />
+            <div className="absolute inset-x-20 top-0 h-px w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+            <div className="absolute inset-x-60 top-0 h-[5px] w-1/4 bg-gradient-to-r from-transparent via-sky-500 to-transparent blur-sm" />
+            <div className="absolute inset-x-60 top-0 h-px w-1/4 bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
+          </div>
         </div>
 
-        <div className="z-1 mb-6 px-3 text-center sm:px-0">
-          <h3 className="text-[12px] sm:text-base">
-            Thank you for checking out my portfolio. This version is in-process.
-          </h3>
-          <h3 className="text-[12px] sm:text-base">
-            In the mean time, please visit{" "}
-            <a
-              href="https://anhbernhardt.com"
-              target="_blank"
-              rel="noreferrer"
-              className="cursor-pointer text-[#FF6A67] hover:text-orange-400"
-            >
-              anhbernhardt.com
-            </a>
-          </h3>
-        </div>
+        {/* <WavyBackground className="max-w-4xl mx-auto my-auto"></WavyBackground> */}
 
         {/* <div className="w-11/12 mx-auto mt-6">
-                    <Carousel images={images}/>
-                </div>  */}
+            <Carousel images={images}/>
+        </div>  */}
 
         {/* <CapsuleBox /> */}
         <div className="absolute bottom-8 mx-auto w-full max-w-[1422px]">
