@@ -5,8 +5,8 @@ import Image from "next/legacy/image";
 const Nav = () => {
     return (
         <div className={`sticky top-0 w-full z-front font-neueHaas font-thin mx-auto max-w-[1422px]`}>
-            <nav className="w-full top-0 sticky flex py-2 border-b-[1px] mx-auto px-3 sm:px-6 justify-between">
-                <a className="w-1/3 flex flex-row relative duration-300 ease-in-out group-hover:text-white group"
+            <nav className="w-full top-0 sticky flex py-2 border-b-[1px] mx-auto px-3 sm:px-8 justify-between">
+                <a className="w-1/4 flex flex-row relative duration-300 ease-in-out group-hover:text-white group"
                    href="https://ahbernhardt.github.io/"
                    target={"_blank"}
                    rel={"noreferrer"}
@@ -17,8 +17,8 @@ const Nav = () => {
                             src={"/favicon/logo.svg"}
                             alt="AB Logo"
                             layout="responsive"
-                            width={20}
-                            height={20}
+                            width={24}
+                            height={24}
                         />
                     </div>
                     <div className="relative w-auto my-auto ml-2">
@@ -31,7 +31,11 @@ const Nav = () => {
                     </div>
                 </a>
 
-                <ul className="w-1/2 sm:w-2/3 flex flex-row self-end justify-end text-sm">
+                <p className="hidden sm:show sm:w-1/2 h-full sm:flex justify-center text-xs text-center align-center uppercase leading-none my-auto">
+                    Portfolio 24'
+                </p>
+
+                <ul className="w-1/4 h-full flex flex-row self-end justify-end text-xs my-auto gap-6">
                     <Link
                         className="relative text-white transition-all cursor-pointer uppercase no-underline hover:no-underline"
                         delay={0} to={"about"} spy smooth ignoreCancelEvents
@@ -40,15 +44,20 @@ const Nav = () => {
                     </Link>
                     <Link
                         className="relative text-white transition-all cursor-pointer uppercase no-underline hover:no-underline"
-                        delay={0} to={"work"}
+                        delay={0} to={"project"} spy smooth ignoreCancelEvents
+                    >
+                        project
+                    </Link>
+                    <Link
+                        className="relative text-white transition-all cursor-pointer uppercase no-underline hover:no-underline"
+                        delay={0} to={"contact"}
                         spy smooth ignoreCancelEvents
                     >
-                        {" "} -work
+                        contact
                     </Link>
                 </ul>
             </nav>
         </div>
-
     );
 };
 export default Nav;

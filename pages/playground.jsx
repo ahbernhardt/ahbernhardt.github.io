@@ -1,8 +1,14 @@
 import React from "react"
-import { Boxes } from "/components/ui/background-boxes"
-import { cn } from "@/lib/utils";
+// import { Boxes } from "/components/ui/background-boxes"
+// import { cn } from "@/lib/utils";
 import {useScroll, useTransform } from "framer-motion";
 import {GoogleGeminiEffect} from "/components/ui/gemini-effect"
+// import CapsuleBox from '/components/capsuleBox/CapsuleBox';
+// const images = [
+//     "https://duruthemes.com/demo/html/fd/images/slider/01.jpg",
+//     "https://duruthemes.com/demo/html/fd/images/slider/02.jpg",
+//     "https://duruthemes.com/demo/html/fd/images/slider/03.jpg",
+// ];
 
 export default function Playground(){
 //     return(
@@ -46,6 +52,9 @@ const ref = React.useRef(null);
           pathLengthFifth,
         ]}
       />
+      {/* <div className="absolute bottom-8 mx-auto w-full max-w-[1422px]">
+          <GravityContact />
+        </div> */}
     </div>
   );
 }
