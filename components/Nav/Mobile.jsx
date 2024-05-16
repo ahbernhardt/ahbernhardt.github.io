@@ -8,7 +8,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(faClose);
 
-const MobileNav = ({ navItems, handleMobileMenu}) => {
+const Mobile = ({ navItems, handleMobileMenu}) => {
     // animation refs & controls
     const fadeInDownFast = {
         show: { opacity: 1, y: 0, transition: { type: "easeIn", duration: 0.5 } },
@@ -63,4 +63,4 @@ const MobileNav = ({ navItems, handleMobileMenu}) => {
     );
 };
 
-export default MobileNav;
+export default Mobile;

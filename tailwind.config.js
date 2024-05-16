@@ -29,7 +29,6 @@ module.exports = {
     fontFamily: {
       josef: ['Josefin Slab', "serif"],
       neueHaas: ['Neue-Haas-Gotesk', "sans-serif"],
-      abril: ['Abril Fatface', "cursive"],
       poppins: ['Poppins', "sans-serif"]
     },
     extend: {
@@ -41,7 +40,8 @@ module.exports = {
         shadow: "#373A36FF",
         gray55: "#556271",
         gray68: "#687789",
-        gray7B: "#7B8898"
+        gray7B: "#7B8898",
+        offBlack: "#0c0c0c"
       },
       backgroundImage: {
         dot: ["radial-gradient(#2d2d2d_1px,transparent_1px)", "background-size:32px_32px"],
@@ -64,18 +64,6 @@ module.exports = {
     important: true,
     plugins: [
       addVariablesForColors,
-      // function ({ matchUtilities, theme }) {
-      //   matchUtilities(
-      //     {
-      //       "bg-dot": (value) => ({
-      //         backgroundImage: `url("${svgToDataUri(
-      //           `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
-      //         )}")`,
-      //       }),
-      //     },
-      //     { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
-      //   ),
-      // }
     ],
   }
 }

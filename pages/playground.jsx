@@ -2,7 +2,7 @@ import React from "react"
 // import { Boxes } from "/components/ui/background-boxes"
 // import { cn } from "@/lib/utils";
 import {useScroll, useTransform } from "framer-motion";
-import {GoogleGeminiEffect} from "/components/ui/gemini-effect"
+import {GoogleGeminiEffect} from "/components/playgrounds/gemini-effect"
 // import CapsuleBox from '/components/capsuleBox/CapsuleBox';
 // const images = [
 //     "https://duruthemes.com/demo/html/fd/images/slider/01.jpg",

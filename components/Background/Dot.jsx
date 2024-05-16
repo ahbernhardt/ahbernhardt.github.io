@@ -1,5 +1,5 @@
 import React from "react"
-export function DotBackground() {
+export function Dot() {
     return (
       <div className="h-[100rem] w-full bg-black bg-dot-white/[0.2] relative flex items-center justify-center">
         {/* Radial gradient for the container to give a faded look */}

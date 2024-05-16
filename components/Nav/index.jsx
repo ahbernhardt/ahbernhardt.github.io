@@ -4,7 +4,7 @@ import Image from "next/legacy/image";
 
 const Nav = () => {
     return (
-        <div className={`sticky top-0 w-full z-front font-neueHaas font-thin mx-auto max-w-[1422px]`}>
+        <div className={`sticky top-0 w-full z-front font-neueHaas font-thin mx-auto`}>
             <nav className="w-full top-0 sticky flex py-2 border-b-[1px] mx-auto px-3 sm:px-8 justify-between">
                 <a className="w-1/4 flex flex-row relative duration-300 ease-in-out group-hover:text-white group"
                    href="https://ahbernhardt.github.io/"
@@ -44,9 +44,9 @@ const Nav = () => {
                     </Link>
                     <Link
                         className="relative text-white transition-all cursor-pointer uppercase no-underline hover:no-underline"
-                        delay={0} to={"project"} spy smooth ignoreCancelEvents
+                        delay={0} to={"projects"} spy smooth ignoreCancelEvents
                     >
-                        project
+                        projects
                     </Link>
                     <Link
                         className="relative text-white transition-all cursor-pointer uppercase no-underline hover:no-underline"

@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from "next/head";
 
-const seo = ({ site }) => {
+const SEO = ({ site }) => {
     const title = site.title ? `${site.title} | Anh Bernhardt` : "Anh Bernhardt";
     return(
         <Head>
@@ -22,4 +22,4 @@ const seo = ({ site }) => {
     );
 };
 
-export default seo;
+export default SEO;
