@@ -3,45 +3,144 @@
 @tailwind utilities;
 
 * {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   box-sizing: border-box;
+  transform-style: preserve-3d;
+
 }
 
 body {
   height: 100%;
   color: #b7ab98;
-  font-family: 'Poppins', "sans-serif";
+  font-family: "Poppins", "sans-serif";
 }
 
-.line{
+.line {
   height: 1px;
   margin-bottom: 20px;
   width: 100%;
   position: relative;
+  justify-content: center;
+  display: flex;
 }
 
-.line svg{
-  width: 100%;
+.line svg {
+  width: 70%;
   height: 500px;
   position: absolute;
   top: -250px;
+
+  margin: 0 auto;
 }
 
-.line svg path{
+.line svg path {
   stroke: white;
   stroke-width: 1px;
   fill: none;
+  margin: 0 auto;
 }
 
-.line .box{
+.line .box {
   height: 40px;
-  width: 100%;
+  width:79%;
   position: relative;
   top: -20px;
   z-index: 1;
 }
 
-.line .box:hover{
-  height: 500px;
+.line .box:hover {
+  height: 200px;
   top: -250px;
+}
+
+:root {
+  --button: hsl(44, 0%, 70%);
+  --button: -color hsl(0, 0%, 4%);
+  --shadow: hsl(0, 0%, 0%);
+  --bg: hsl(53, 0%, 45%);
+  --header: hsl(53, 0%, 48%);
+  --color: hsl(0, 0%, 98%);
+  --lit-header: hsl(53, 0%, 90%);
+  --speed: 2s;
+}
+
+@property --swing-x {
+  initial-value: 0;
+  inherits: false;
+  syntax: "<integer>";
+}
+
+@property --swing-y {
+  initial-value: 0;
+  inherits: false;
+  syntax: "<integer>";
+}
+
+.err404 {
+  animation: swing var(--speed) infinite alternate ease-in-out;
+  /* font-size: clamp(2rem, 40rem, 20rem); */
+  font-size: clamp(12rem, 9.3818rem + 11.6364vw, 28rem);
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 1rem;
+  letter-spacing: 1rem;
+  transform: translate3d(0, 0, 0vmin) --x
+    calc(50% + (var(--swing-x) * 0.5) * 1%);
+  background: radial-gradient(var(--lit-header), var(--header) 45%) var(--x) 100% / 200% 200%;
+  -webkit-background-clip: text;
+  color: rgba(186, 185, 185, 0.631);
+}
+
+.err404::after {
+  animation: swing var(--speed) infinite alternate ease-in-out;
+  content: "404";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--shadow);
+  filter: blur(1.5vmin);
+  transform: scale(1.05) translate3d(0, 12%, -10vmin)
+    translate(
+      calc((var(--swing-x, 0) * 0.05) * 1%),
+      calc((var(--swing-y) * 0.05) * 1%)
+    );
+}
+
+.cloak {
+  animation: swing var(--speed) infinite alternate-reverse ease-in-out;
+  height: 100%;
+  width: 100%;
+  transform-origin: 50% 30%;
+  transform: rotate(calc(var(--swing-x) * -0.25deg));
+  background: radial-gradient(40% 40% at 50% 42%, transparent, rgb(16, 16, 16) 35%);
+}
+
+.cloak_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.cloak_container {
+  height: 240vmax;
+  width: 240vmax;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes swing {
+  0% {
+    --swing-x: -100;
+    --swing-y: -100;
+  }
+  50% {
+    --swing-y: 0;
+  }
+  100% {
+    --swing-y: -100;
+    --swing-x: 100;
+  }
 }

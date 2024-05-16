@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import Footer from "/components/Footer";
 import { Section } from "/components/Section";
+import { Background } from "@tsparticles/engine";
 
 export default function Home() {
   const path = useRef(null);
@@ -61,29 +62,47 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col relative w-full h-screen justify-center align-center text-center">
-        <div className="flex flex-col w-3/4 aspect-video  mx-auto my-auto gap-12">
-            <div className="text-white">
-                <div className="text-[10vw] font-bold">404</div>
-                <p> Uh oh! Looks like you got lost!
-            </p>
-            </div>
-            <div className="line">
-                <div className="box"
-                onMouseEnter={() => {manageMouseEnter();}}
-                onMouseMove={(e) => { manageMouseMove(e);}}
-                onMouseLeave={() => { manageMouseLeave();}}
-                />
-                <svg><path ref={path}/></svg>
-            </div>
-
-            <a href="/" className="z-1 w-fit px-16 py-2 mx-auto border-[1px] border-white  rounded-full hover:bg-white hover:text-offBlack">
-                back home
-            </a>
+    <main className="flex h-auto w-full flex-col justify-center text-center"
+    >
+      {/* <div className="relative h-[100vh]" style={{ background: "var(--bg)", color: "var(--color)" }}> */}
+        <div className="err404">404</div>
+        <div class="cloak_wrapper">
+          <div class="cloak_container">
+            <div class="cloak"></div>
+          </div>
         </div>
-        <Section>
-            <Footer/>
-        </Section>
+      {/* </div> */}
+      
+      <div className="mx-auto my-auto flex w-full flex-col gap-12 mb-6 sm:mb-12">
+        <p> Uh oh! Looks like you got lost!</p>
+        <div className="line">
+          <div
+            className="box"
+            onMouseEnter={() => {
+              manageMouseEnter();
+            }}
+            onMouseMove={(e) => {
+              manageMouseMove(e);
+            }}
+            onMouseLeave={() => {
+              manageMouseLeave();
+            }}
+          />
+          <svg>
+            <path ref={path} />
+          </svg>
+        </div>
+
+        <a
+          href="/"
+          className="z-1 mx-auto w-fit rounded-full border-[1px] border-white px-16  py-2 hover:bg-white hover:text-offBlack"
+        >
+          back home
+        </a>
+      </div>
+      <Section>
+        <Footer />
+      </Section>
     </main>
   );
 }
