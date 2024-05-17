@@ -1,7 +1,7 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import Footer from "/components/Footer";
+import useWindow from "/utils/useWindow";
 import { Section } from "/components/Section";
-import { Background } from "@tsparticles/engine";
 
 export default function Home() {
   const path = useRef(null);
@@ -60,45 +60,43 @@ export default function Home() {
     time = Math.PI / 2;
     progress = 0;
   };
-
   return (
-    <main className="flex h-auto w-full flex-col justify-center text-center"
-    >
-      {/* <div className="relative h-[100vh]" style={{ background: "var(--bg)", color: "var(--color)" }}> */}
-        <div className="err404">404</div>
-        <div class="cloak_wrapper">
-          <div class="cloak_container">
-            <div class="cloak"></div>
-          </div>
+    <main className="flex h-screen w-full flex-col justify-center text-center">
+      <div className="m-auto flex flex-col text-center uppercase leading-tight">
+        <p className="error404 text-center text-[20vw] font-bold text-white/20">
+          404
+        </p>
+        <p className="text-[4vw]">Uh oh! Looks like you got lost!</p>
+      </div>
+      <div class="cloak_wrapper">
+        <div class="cloak_container">
+          <div class="cloak"></div>
         </div>
-      {/* </div> */}
+      </div>
       
-      <div className="mx-auto my-auto flex w-full flex-col gap-12 mb-6 sm:mb-12">
-        <p> Uh oh! Looks like you got lost!</p>
-        <div className="line">
-          <div
-            className="box"
-            onMouseEnter={() => {
-              manageMouseEnter();
-            }}
-            onMouseMove={(e) => {
-              manageMouseMove(e);
-            }}
-            onMouseLeave={() => {
-              manageMouseLeave();
-            }}
-          />
-          <svg>
-            <path ref={path} />
-          </svg>
-        </div>
+      <a
+        href="/"
+        className="z-1 mb-[20vh] mx-auto w-fit rounded-full border-[1px] border-white px-16 py-2 hover:bg-white hover:text-offBlack"
+      >
+        back home
+      </a>
 
-        <a
-          href="/"
-          className="z-1 mx-auto w-fit rounded-full border-[1px] border-white px-16  py-2 hover:bg-white hover:text-offBlack"
-        >
-          back home
-        </a>
+      <div className="line">
+        <div
+          className="box"
+          onMouseEnter={() => {
+            manageMouseEnter();
+          }}
+          onMouseMove={(e) => {
+            manageMouseMove(e);
+          }}
+          onMouseLeave={() => {
+            manageMouseLeave();
+          }}
+        />
+        <svg>
+          <path ref={path} />
+        </svg>
       </div>
       <Section>
         <Footer />

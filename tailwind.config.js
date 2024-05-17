@@ -45,6 +45,8 @@ module.exports = {
       },
       backgroundImage: {
         dot: ["radial-gradient(#2d2d2d_1px,transparent_1px)", "background-size:32px_32px"],
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       zIndex: {
         1: "1",
