@@ -2,8 +2,26 @@ import React, { useRef, useEffect } from "react";
 import Footer from "/components/Footer";
 import useWindow from "/utils/useWindow";
 import { Section } from "/components/Section";
+import SmoothScroll from "/components/SmoothScroll";
+import SEO from "components/SEO";
+import Nav from "/components/Nav";
+import Background from "/components/Background";
 
 export default function Home() {
+
+  const site = {
+    title: "Home",
+    author: "Anh Bernhardt",
+    description: "Welcome to my portfolio",
+    url: "https://ahbernhardt.github.io/",
+    social: {
+      cardType: "summary_large_image",
+      url: "https://ahbernhardt.github.io",
+    },
+    image: "",
+  };
+
+  
   const path = useRef(null);
   let progress = 0;
   let x = 0.5;
@@ -61,6 +79,10 @@ export default function Home() {
     progress = 0;
   };
   return (
+    <SmoothScroll>
+      <SEO site={site} />
+      <Nav />
+      <Background/>
     <main className="flex h-screen w-full flex-col justify-center text-center">
       <div className="m-auto flex flex-col text-center uppercase leading-tight">
         <p className="error404 text-center text-[20vw] font-bold text-white/20">
@@ -102,5 +124,7 @@ export default function Home() {
         <Footer />
       </Section>
     </main>
+    </SmoothScroll>
+    
   );
 }

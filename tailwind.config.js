@@ -66,6 +66,7 @@ module.exports = {
     important: true,
     plugins: [
       addVariablesForColors,
+      require('tailwindcss-gridlines')
     ],
   }
 }

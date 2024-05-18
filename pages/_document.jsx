@@ -14,7 +14,6 @@ export default function Document() {
         />
       </Head>
       <body>
-      {/* bg-[radial-gradient(#2d2d2d_1px,transparent_1px)] [background-size:24px_24px] */}
         <Main />
         <NextScript />
       </body>

@@ -65,6 +65,7 @@
     "simplex-noise": "^4.0.1",
     "styled-components": "^6.1.8",
     "tailwind-merge": "^2.2.1",
+    "tailwindcss-gridlines": "^0.2.4",
     "three": "^0.164.1"
   },
   "devDependencies": {

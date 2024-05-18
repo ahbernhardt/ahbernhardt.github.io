@@ -1,4 +1,3 @@
-'use client';
 import { useState } from 'react';
 import Titles from './Titles.jsx';
 import Descriptions from './descriptions';
