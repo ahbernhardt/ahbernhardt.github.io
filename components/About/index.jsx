@@ -1,10 +1,9 @@
-import styles from './about.module.scss';
+// import styles from './about.module.scss';
 import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
-// import Rounded from '../../common/RoundedButton';
 
 export default function index() {
-    const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
+    const phrase = "More formally, I'm a Full Stack Web Developer for the Minnesota Timberwolves & Lynx. I design and build engaging interactive experiences.";
     const description = useRef(null);
     const isInView = useInView(description)
 
@@ -36,21 +35,24 @@ export default function index() {
         }
     }
     return (
-        <div ref={description} className={styles.description}>
-            <div className={styles.body}>
-                <p>
+        <div ref={description} className="flex px-[12px] sm:px-[24px] justify-center">
+            <div className="w-full flex max-w-[80%] gap-[10%] relative">
+                <p className="w-[55%] gap-[8px] text-[36px]">
                 {
                     phrase.split(" ").map( (word, index) => {
-                        return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
+                        return <span key={index} className="relative overflow-hidden inline-flex mr-[8px]">
+                            <motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>
+                                {word}
+                            </motion.span>
+                        </span>
                     })
                 }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</motion.p>
-                {/* <div data-scroll data-scroll-speed={0.1}>
-                    <Rounded className={styles.button}>
-                        <p>About me</p>
-                    </Rounded>
-                </div> */}
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}
+                    className="w-[35%] text-lg text-[#82796b]"
+                >
+                    The combination of my passion for design, code & interaction positions me in a unique place in the web design world.
+                </motion.p>
             </div>
         </div>
     )

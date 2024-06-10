@@ -1,17 +1,16 @@
 .descriptions{
     position: absolute;
-    top: 3px;
+    top: 0;
     height: 100%;
     width: 100%;
     z-index: 2;
     pointer-events: none;
     .description{
-        background-color: #ec4e39;
+        background-color: #455CE9;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding: 0 0 2px 1%;
         clip-path: inset(50% 0 50%);
         transition: clip-path .4s;
         p{
