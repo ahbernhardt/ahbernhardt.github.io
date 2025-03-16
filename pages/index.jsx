@@ -27,7 +27,7 @@ export default function Home() {
     <SmoothScroll>
       <SEO site={site} />
       <Nav />
-      <Background />
+      {/* <Background> */}
       <Section className="flex mt-[10vh] h-[35vh] justify-center">
         <MaskText
           words="Welcome"
@@ -69,6 +69,7 @@ export default function Home() {
       <Section className="mt-[30vh]">
         <Contact />
       </Section>
+      {/* </Background> */}
     </SmoothScroll>
   );
 }

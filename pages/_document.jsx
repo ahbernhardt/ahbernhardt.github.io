@@ -1,9 +1,10 @@
 import React from "react";
 import { Html, Head, NextScript, Main } from "next/document";
+import Background from "../components/background";
 
 export default function Document() {
   return (
-    <Html lang="en" className="bg-[#0c0c0c]">
+    <Html lang="en" className="bg-slate-900">
       <Head>
         {/* eslint-disable-next-line @next/next/google-font-display */}
         <script src='https://cdn.jsdelivr.net/npm/pathseg@1.2.1/pathseg.min.js'/>
@@ -16,6 +17,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <Background></Background>
       </body>
     </Html>
   );

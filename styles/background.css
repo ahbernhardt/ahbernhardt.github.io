@@ -1,4 +1,4 @@
-.body-parallax {
+/* .body-parallax {
     position: fixed;
     top: 0;
     left: 0;
@@ -7,7 +7,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-}
+} */
 
 .parallax {
     position: relative;
@@ -18,8 +18,8 @@
     height: 100%;
     margin: 0 auto;
     z-index: 0;
-    border-left: 1px solid #2d2d2d;
-    border-right: 1px solid #2d2d2d;
+    border-left: 1px solid #bcbcbc25;
+    border-right: 1px solid #bcbcbc25;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -27,13 +27,13 @@
     position: relative;
     display: block;
     height: 100%;
-    border-right: 1px solid #2d2d2d;
-    border-left: 1px solid #2d2d2d;
+    border-right: 1px solid #bcbcbc25;
+    border-left: 1px solid #bcbcbc25;
 }
 
 .parallax-group:nth-child(1) {
-    border-left: 1px solid #2d2d2d;
-    border-right: 1px solid #2d2d2d;
+    border-left: 1px solid #bcbcbc25;
+    border-right: 1px solid #bcbcbc25;
     animation: expand 200ms normal ease-out
 }
 
@@ -57,18 +57,23 @@
 
 @keyframes expand {
     0% {
-        height: 0
+        height: 0;
     }
 
     25% {
-        height: 0
+        height: 0;
     }
 
     100% {
-        height: 100vh
+        height: 100vh;
     }
 }
 
+@media only screen and (min-width: 360px) {
+    .parallax {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 @media only screen and (min-width: 768px) {
     .parallax {

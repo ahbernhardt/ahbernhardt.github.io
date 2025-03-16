@@ -72,9 +72,9 @@ export default function index() {
       <div className="w-full">
         <div className="m-[10%] relative border-b-[1px] border-white">
           <h2 className="text-[4vw]">Let's work together</h2>
-          <motion.div style={{ x, left: 'calc(100% - 480px)', top: '20%' }} className="absolute" >
+          <motion.div style={{ x, left: 'calc(100% - 20%)', top: '20%' }} className="absolute invisible md:visible" >
             <Rounded backgroundColor={"#334BD3"} 
-            className="flex absolute items-center justify-center aspect-square w-[180px] text-white rounded-full bg-[#455CE9]">
+            className="flex absolute items-center justify-center aspect-square w-[60px] sm:w-[180px] text-white rounded-full bg-[#455CE9]">
               <p className="z-2">Get in touch</p>
             </Rounded>
           </motion.div>
