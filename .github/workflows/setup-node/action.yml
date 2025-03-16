@@ -23,5 +23,4 @@ runs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4 
       with:
-        name: your-artifact-name
-        path: path/to/files
+        path: ./out
