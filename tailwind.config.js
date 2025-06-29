@@ -9,12 +9,11 @@ const { flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalett
 module.exports = {
   content: [
     './*.html',
-    './pages/**/*.{js,jsx,mdx}',
-    './components/**/*.{js,jsx,mdx}',
-    './utils/**/*.{js,jsx,mdx}',
-    './public/**/*.{js,jsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './utils/**/*.{js,ts,jsx,tsx,mdx}',
+    './public/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: "class",
   theme: {
     // breakpoints have been tailored to the most popular screen sizes
     screens: {
@@ -44,7 +43,9 @@ module.exports = {
         gray7B: "#7B8898"
       },
       backgroundImage: {
-        dot: ["radial-gradient(#2d2d2d_1px,transparent_1px)", "background-size:32px_32px"],
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+            'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       zIndex: {
         1: "1",
@@ -61,33 +62,7 @@ module.exports = {
         back: "-1000",
       },
     },
-    important: true,
-    plugins: [
-      addVariablesForColors,
-      // function ({ matchUtilities, theme }) {
-      //   matchUtilities(
-      //     {
-      //       "bg-dot": (value) => ({
-      //         backgroundImage: `url("${svgToDataUri(
-      //           `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
-      //         )}")`,
-      //       }),
-      //     },
-      //     { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
-      //   ),
-      // }
-    ],
-  }
-}
-   
-
-  function addVariablesForColors({ addBase, theme }) {
-    let allColors = flattenColorPalette(theme("colors"));
-    let newVars = Object.fromEntries(
-      Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-    );
-   
-    addBase({
-      ":root": newVars,
-    });
-  }
+    variants: {},
+    plugins: [],
+  },
+};

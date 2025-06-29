@@ -5,7 +5,7 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 0;
 }
 
@@ -21,6 +21,8 @@
     padding: 0 0.75rem;
     z-index: 0;
 }
+
+
 
 .parallax-group {
     position: relative;
@@ -49,10 +51,6 @@
     animation: expand 800ms normal ease-out
 }
 
-.parallax-group:nth-child(4) {
-    display: none;
-    animation: expand 1000ms normal ease-out
-}
 
 @keyframes expand {
     0% {
@@ -68,7 +66,7 @@
     }
 }
 
-/* .parallax-item {
+.parallax-item {
     position: absolute;
     display: block;
     width: 1em;
@@ -109,7 +107,7 @@
 
 .parallax-item--x:after {
     /*transform: rotate(-45deg)*/
-/* }
+}
 
 .parallax-group--far-left .parallax-item:nth-child(1) {
     top: 8em
@@ -117,7 +115,7 @@
 
 .parallax-group--far-left .parallax-item:nth-child(2) {
     /*display: none;*/
-    /* top: 38em
+    top: 38em
 }
 .parallax-group--far-left .parallax-item:nth-child(3) {
     top: 64em;
@@ -169,7 +167,7 @@
 
 .parallax-group--far-right .parallax-item:nth-child(3) {
     display: none
-} */
+}
 
 
 @media only screen and (min-width: 20em) {
@@ -194,20 +192,20 @@
 
 @media only screen and (min-width: 60em) {
     .parallax {
-        padding:0 2rem;
+        padding:0 2rem
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .parallax {
-        padding:0 calc(50% - 40em);
+        padding:0 calc(50% - 40em)
     }
 }
 
 @media only screen and (min-width: 1360px) {
     .parallax {
-        /* max-width: 1488px; */
-        padding: 0 2em;
+        max-width: 1488px;
+        padding: 0 2em
     }
 }
 
