@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-Mediu.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-RomanItalic.eot');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-Black.eot');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-MediumItalic.eot');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-BlackItalic.eot');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-Roman.eot');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-BoldItalic.eot');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-LightItalic.eot');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-Bold.eot');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-Light.eot');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-XXThin.eot');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-XThinItalic.eot');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-XXThinItalic.eot');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-XThin.eot');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-Thin.eot');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue-Haas-Grotesk';
+    src: url('public/fonts/neue-haas-gotesk/NeueHaasDisplay-ThinItalic.eot');
+    font-weight: 100;
+    font-style: italic;
+}
