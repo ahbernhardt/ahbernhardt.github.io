@@ -1,73 +1,37 @@
 {
-  "name": "ahbernhardt.github.io",
-  "version": "0.1.0",
+  "name": "anhbernhardt.com",
+  "version": "0.1.1",
   "private": true,
-  "main": "index.js",
-  "homepage": "https://ahbernhardt.github.io/",
-  "keywords": [],
-  "author": "Anh Bernhardt",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ahbernhardt.github.io/issues"
-  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d out",
-    "check-code": "prettier --check .",
-    "format": "prettier --write ."
-  },
-  "browser": {
-    "fs": false,
-    "os": false,
-    "path": false
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ahbernhardt/ahbernhardt.github.io.git"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.2",
-    "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/free-brands-svg-icons": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@tsparticles/engine": "^3.8.1",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.8.1",
-    "babel": "^6.23.0",
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-brands-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.1",
+    "@studio-freight/lenis": "^1.0.42",
+    "@tailwindcss/language-server": "^0.14.29",
     "clsx": "^2.1.1",
-    "eslint": "^9.30.0",
-    "eslint-config-next": "^15.3.4",
-    "font-awesome": "^4.7.0",
-    "framer-motion": "^12.19.2",
-    "gh-pages": "^6.3.0",
-    "matter-js": "^0.20.0",
-    "mini-svg-data-uri": "^1.4.4",
-    "next": "^15.3.4",
-    "react": "^19.1.0",
-    "react-animated-cursor": "^2.11.2",
-    "react-awesome-reveal": "^4.3.1",
-    "react-dom": "^19.1.0",
+    "framer-motion": "^12.23.26",
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.16",
+    "next": "^16.0.10",
+    "postcss": "^8.5.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",
-    "react-intersection-observer": "^9.16.0",
-    "react-modal": "^3.16.3",
-    "react-responsive-carousel": "^3.2.23",
-    "react-scroll": "^1.9.3",
-    "simplex-noise": "^4.0.3",
-    "styled-components": "^6.1.19",
-    "tailwind-merge": "^3.3.1"
+    "react-intersection-observer": "^10.0.0",
+    "sass": "^1.97.0",
+    "scss": "^0.2.4",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.3.4",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/postcss": "^4.0.14",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.14"
+    "@tailwindcss/postcss": "^4.1.18",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.1.18"
   }
 }

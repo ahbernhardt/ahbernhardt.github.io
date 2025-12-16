@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  /* FONTS */
+  --font-Haas: "Neue-Haas-Gotesk", "sans-serif";
+  --font-ivyora: "IvyOra Display", "serif";
+
+  /* COLORS */
+  --color-frost: rgb(255, 255, 255);
+  --color-offWhite: #dedede;
+
+  /* CSS HEX */
+  --color-hexNight: #12120e; /* background */
+  --color-hexBlack: #25221f; /* stripes */
+  --color-hexBrown: #2d2d2d; /* lines */
+  --color-hexSage: #aeab91; /* base */
+  --color-hexBeige: #e4e6d1; /* highlight */
+  --color-hexYellow: #feb347; /* accent/anchor */
+  --color-hexOrange: #fd7801; /* accent background 10% */
+  --color-hexBlue: #263958;
+
+  /*  Z-INDEX  */
+  --z-1: 1;
+  --z-2: 2;
+  --z-3: 3;
+  --z-4: 4;
+  --z-5: 5;
+  --z-6: 6;
+  --z-7: 7;
+  --z-8: 8;
+  --z-9: 9;
+  --z-10: 10;
+  --z-front: 1000;
+  --z-back: -1000;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-hexSage);
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: "Neue-Haas-Gotesk", sans-serif;
+}
+
+@layer utilities {
+  .striped-background {
+    background-image: linear-gradient(
+      -45deg,
+      #25221f0d 25%,
+      transparent 25%,
+      transparent 50%,
+      #25221f0d 50%,
+      #25221f0d 75%,
+      transparent 75%,
+      transparent
+    );
+    background-size: 10px 10px;
+  }
+}
